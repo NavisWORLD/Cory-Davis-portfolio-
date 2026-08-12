@@ -2,18 +2,29 @@
 
 Public portfolio for **Cory Davis**, focused on local AI systems, persistent memory, adaptive state, evidence instrumentation, browser-native creative tools, simulation, electronics, and rapid technical prototyping.
 
-## Live site
+## Portfolio site
 
-This repository deploys to GitHub Pages from `main` using GitHub Actions.
+GitHub Pages target:
+
+`https://navisworld.github.io/Cory-Davis-portfolio-/`
+
+The full site is committed to `main`. Because this is a brand-new repository, GitHub Pages itself still needs the one-time repository setting enabled before the first deployment can succeed:
+
+1. Open **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. Open **Actions → Deploy portfolio to GitHub Pages → Run workflow**.
+
+After that one-time enablement, the included workflow publishes the static site. It is currently manual-only so normal content commits do not show a red deployment check before Pages is enabled.
 
 ## Portfolio structure
 
 - `index.html` — recruiter-first public homepage
 - `projects.html` — technical project explorer and evidence map
-- `resume.html` — clean web résumé
-- `styles.css` — responsive visual system
-- `app.js` — navigation, filters, command palette, and interactions
+- `resume.html` — clean web résumé with print/PDF support
+- `styles.css` — responsive dark/light visual system
+- `app.js` — theme control, project filters, command palette, navigation, and copy-email interaction
 - `.github/workflows/pages.yml` — GitHub Pages deployment
+- `LICENSE` — MIT license for original portfolio site code/copy
 
 ## Flagship work
 
@@ -42,8 +53,12 @@ The portfolio does not convert persistence into consciousness claims, quantum pr
 ## Primary technical links
 
 - COSMOS: https://github.com/NavisWORLD/Cosmos
+- COSMOS open-source reconstruction: https://github.com/NavisWORLD/Cosmos/pull/2
 - CST: https://github.com/NavisWORLD/The-theory-of-CST
+- 12D Hebbian Transformer lineage: https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-ver.4.2
+- Alien Conductor: https://github.com/NavisWORLD/-reality-bridge-alien-conductor-local-ai-band
 - Hugging Face: https://huggingface.co/phera-ra/QC67_cosmo
+- Zenodo DOI: https://doi.org/10.5281/zenodo.17574447
 - GitHub profile: https://github.com/NavisWORLD
 
 ## Contact
@@ -53,4 +68,4 @@ Email: `pheras.king@gmail.com`
 
 ## License
 
-Original portfolio site code and copy in this repository are released under the MIT License. Linked repositories, model weights, datasets, and third-party artifacts retain their own licenses and provenance requirements.
+Original portfolio site code and copy in this repository are released under the MIT License. Linked repositories, model weights, datasets, research artifacts, and third-party material retain their own licenses and provenance requirements.
