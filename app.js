@@ -20,6 +20,13 @@
   });
 
   const nav = document.querySelector('.nav');
+  if (nav && !nav.querySelector('a[href="library.html"]')) {
+    const libraryLink = document.createElement('a');
+    libraryLink.href = 'library.html';
+    libraryLink.textContent = 'Library';
+    const resumeLink = nav.querySelector('a[href="resume.html"]');
+    nav.insertBefore(libraryLink, resumeLink || nav.querySelector('.hire-link') || null);
+  }
   if (nav && !nav.querySelector('[data-menu-toggle]')) {
     const menuButton = document.createElement('button');
     menuButton.type = 'button';
@@ -91,6 +98,17 @@
 
   const palette = document.querySelector('[data-command-palette]');
   const paletteInput = document.querySelector('[data-command-input]');
+  if (palette && !palette.querySelector('a[href="library.html"]')) {
+    const results = palette.querySelector('.command-results');
+    if (results) {
+      const item = document.createElement('a');
+      item.className = 'command-item';
+      item.dataset.commandItem = '';
+      item.href = 'library.html';
+      item.innerHTML = '<span>Open-source engineering library</span><span class="command-key">Library</span>';
+      results.insertBefore(item, results.children[2] || null);
+    }
+  }
   const commandItems = [...document.querySelectorAll('[data-command-item]')];
 
   const openPalette = () => {
