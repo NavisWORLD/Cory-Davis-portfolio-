@@ -1,0 +1,11 @@
+{
+  "name": "Cory Davis — AI Systems Builder",
+  "short_name": "Cory Davis",
+  "description": "Public engineering portfolio for Cory Davis / NavisWORLD.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07100e",
+  "theme_color": "#07100e",
+  "icons": []
+}
