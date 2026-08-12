@@ -39,19 +39,77 @@
     nav.insertBefore(menuButton, hireLink || nav.firstChild);
   }
 
+  const addExternalLinkByHeading = (headingNeedle, href, label, marker) => {
+    const heading = [...document.querySelectorAll('h2, h3')]
+      .find((node) => node.textContent.toLowerCase().includes(headingNeedle.toLowerCase()));
+    if (!heading) return;
+    const card = heading.closest('.project-row, .card');
+    if (!card) return;
+    const actions = card.querySelector('.project-actions, .card-links');
+    if (!actions || actions.querySelector(`[data-added-link="${marker}"]`)) return;
+    const link = document.createElement('a');
+    link.className = actions.classList.contains('project-actions') ? 'btn btn-ghost' : 'inline-link';
+    link.dataset.addedLink = marker;
+    link.href = href;
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    link.textContent = label;
+    actions.appendChild(link);
+  };
+
+  addExternalLinkByHeading(
+    '12D Hebbian Transformer',
+    'https://github.com/NavisWORLD/Cosmos/tree/career-os-portfolio-2/reference/dyn12_torch',
+    'Trainable dyn12 reference + CI ↗',
+    'dyn12-reference'
+  );
+  addExternalLinkByHeading(
+    'Universe Simulation Engine',
+    'https://github.com/NavisWORLD/Cosmos/tree/career-os-portfolio-2/reference/universe_engine',
+    'Runnable C++/Python engine ↗',
+    'universe-reference'
+  );
+  addExternalLinkByHeading(
+    'Portable COSMOS Reference',
+    'https://github.com/NavisWORLD/Cosmos/tree/career-os-portfolio-2/reference/dyn12_torch',
+    'Trainable dyn12 module ↗',
+    'dyn12-from-portable'
+  );
+
   const isLibraryPage = location.pathname.endsWith('/library.html') || location.pathname.endsWith('library.html');
   if (isLibraryPage) {
     const heroActions = document.querySelector('.page-hero .hero-actions');
-    if (heroActions && !heroActions.querySelector('[data-word-library]')) {
-      const wordLink = document.createElement('a');
-      wordLink.className = 'btn';
-      wordLink.dataset.wordLibrary = '';
-      wordLink.href = 'https://drive.google.com/drive/folders/16gJlHxHqDWAG4xsUKBKIxzY69v92Jv4S';
-      wordLink.target = '_blank';
-      wordLink.rel = 'noreferrer';
-      wordLink.textContent = 'Download 00–24 Word library ↗';
-      heroActions.appendChild(wordLink);
-    }
+    const addHeroDownload = (href, text, marker) => {
+      if (!heroActions || heroActions.querySelector(`[data-download="${marker}"]`)) return;
+      const link = document.createElement('a');
+      link.className = 'btn';
+      link.dataset.download = marker;
+      link.href = href;
+      link.target = '_blank';
+      link.rel = 'noreferrer';
+      link.textContent = text;
+      heroActions.appendChild(link);
+    };
+    addHeroDownload(
+      'https://drive.google.com/drive/folders/16gJlHxHqDWAG4xsUKBKIxzY69v92Jv4S',
+      'Download 00–24 Word library ↗',
+      'word-library'
+    );
+    addHeroDownload(
+      'https://drive.google.com/file/d/1-u_tfZ9nxgJZ3AfcaDN1CQS9AcnIg-xf/view',
+      '114-page master book ↗',
+      'master-book'
+    );
+    addHeroDownload(
+      'https://drive.google.com/file/d/16Neusv03kjHmInoP1d6ufNODeTD_uc6y/view',
+      'Universe Engine source ZIP ↗',
+      'universe-zip'
+    );
+    addHeroDownload(
+      'https://drive.google.com/file/d/1Pb7ByxaOfPGL2WBg3IRrlQsQKSg6Ah1X/view',
+      'dyn12 PyTorch source ZIP ↗',
+      'dyn12-zip'
+    );
   }
 
   if (savedTheme === 'light' || savedTheme === 'dark') setTheme(savedTheme);
