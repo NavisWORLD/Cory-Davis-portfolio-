@@ -39,6 +39,21 @@
     nav.insertBefore(menuButton, hireLink || nav.firstChild);
   }
 
+  const isLibraryPage = location.pathname.endsWith('/library.html') || location.pathname.endsWith('library.html');
+  if (isLibraryPage) {
+    const heroActions = document.querySelector('.page-hero .hero-actions');
+    if (heroActions && !heroActions.querySelector('[data-word-library]')) {
+      const wordLink = document.createElement('a');
+      wordLink.className = 'btn';
+      wordLink.dataset.wordLibrary = '';
+      wordLink.href = 'https://drive.google.com/drive/folders/16gJlHxHqDWAG4xsUKBKIxzY69v92Jv4S';
+      wordLink.target = '_blank';
+      wordLink.rel = 'noreferrer';
+      wordLink.textContent = 'Download 00–24 Word library ↗';
+      heroActions.appendChild(wordLink);
+    }
+  }
+
   if (savedTheme === 'light' || savedTheme === 'dark') setTheme(savedTheme);
 
   document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
