@@ -86,6 +86,14 @@ class PortfolioIntegrityTests(unittest.TestCase):
         self.assertIn("File presence is not proof of authorship", provenance)
         self.assertIn("NULL", evidence)
 
+    def test_public_ui_exposes_runnable_reference_paths(self):
+        app = (ROOT / "app.js").read_text(encoding="utf-8")
+        self.assertIn("reference/dyn12_torch", app)
+        self.assertIn("reference/universe_engine", app)
+        self.assertIn("1Pb7ByxaOfPGL2WBg3IRrlQsQKSg6Ah1X", app)
+        self.assertIn("16Neusv03kjHmInoP1d6ufNODeTD_uc6y", app)
+        self.assertIn("1-u_tfZ9nxgJZ3AfcaDN1CQS9AcnIg-xf", app)
+
 
 if __name__ == "__main__":
     unittest.main()
