@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://navisworld.github.io/Cory-Davis-portfolio-/sitemap.xml
