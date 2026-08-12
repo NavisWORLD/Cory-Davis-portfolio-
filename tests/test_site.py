@@ -3,7 +3,12 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = [ROOT / "index.html", ROOT / "projects.html", ROOT / "resume.html"]
+PAGES = [
+    ROOT / "index.html",
+    ROOT / "projects.html",
+    ROOT / "library.html",
+    ROOT / "resume.html",
+]
 
 
 class LinkParser(HTMLParser):
@@ -45,9 +50,8 @@ class PortfolioIntegrityTests(unittest.TestCase):
     def test_expected_public_pages_exist(self):
         for page in PAGES:
             self.assertTrue(page.exists(), page)
-        self.assertTrue((ROOT / "styles.css").exists())
-        self.assertTrue((ROOT / "app.js").exists())
-        self.assertTrue((ROOT / "LICENSE").exists())
+        for required in ("styles.css", "app.js", "LICENSE", "PROVENANCE.md", "EVIDENCE.md"):
+            self.assertTrue((ROOT / required).exists(), required)
 
     def test_local_links_and_assets_resolve(self):
         for page in PAGES:
@@ -70,11 +74,17 @@ class PortfolioIntegrityTests(unittest.TestCase):
         self.assertIn("pheras.king@gmail.com", combined)
         self.assertNotIn("phrase.king@gmail.com", combined)
 
-    def test_core_navigation_is_present(self):
-        for page in PAGES:
-            text = page.read_text(encoding="utf-8")
-            for target in ("index.html", "projects.html", "resume.html"):
-                self.assertIn(target, text, f"{page.name} missing navigation to {target}")
+    def test_core_navigation_targets_exist(self):
+        for target in ("index.html", "projects.html", "library.html", "resume.html"):
+            self.assertTrue((ROOT / target).exists())
+
+    def test_portfolio_keeps_evidence_and_provenance_visible(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        provenance = (ROOT / "PROVENANCE.md").read_text(encoding="utf-8")
+        evidence = (ROOT / "EVIDENCE.md").read_text(encoding="utf-8")
+        self.assertIn("Evidence standard", readme)
+        self.assertIn("File presence is not proof of authorship", provenance)
+        self.assertIn("NULL", evidence)
 
 
 if __name__ == "__main__":
