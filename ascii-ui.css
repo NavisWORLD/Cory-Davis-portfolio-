@@ -1,0 +1,517 @@
+/*
+ * CORY.DAVIS // PORTFOLIO_OS // ASCII INTERFACE LAYER
+ *
+ * Non-destructive visual shell. Existing HTML remains the semantic and
+ * interactive source of truth; ascii-ui.js decorates it with text-mode frames.
+ */
+
+:root {
+  --ascii-bg: #010403;
+  --ascii-panel: rgba(3, 13, 9, 0.91);
+  --ascii-panel-soft: rgba(5, 18, 13, 0.76);
+  --ascii-text: #eafff5;
+  --ascii-muted: #8fb7a6;
+  --ascii-dim: #4c7665;
+  --ascii-green: #79ffc7;
+  --ascii-cyan: #73dfff;
+  --ascii-violet: #b29cff;
+  --ascii-gold: #ffd477;
+  --ascii-red: #ff839d;
+  --ascii-line: rgba(121, 255, 199, 0.18);
+  --ascii-glow: 0 0 18px rgba(121, 255, 199, 0.16);
+  --ascii-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+:root[data-theme="light"] {
+  --ascii-bg: #eef8f2;
+  --ascii-panel: rgba(248, 255, 251, 0.94);
+  --ascii-panel-soft: rgba(239, 249, 243, 0.88);
+  --ascii-text: #11271e;
+  --ascii-muted: #49695c;
+  --ascii-dim: #718c80;
+  --ascii-green: #087f58;
+  --ascii-cyan: #176d95;
+  --ascii-violet: #6654c7;
+  --ascii-gold: #8c6600;
+  --ascii-red: #9b3550;
+  --ascii-line: rgba(18, 86, 60, 0.2);
+  --ascii-glow: none;
+}
+
+body.ascii-ui-enabled {
+  background:
+    linear-gradient(rgba(121,255,199,.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(121,255,199,.018) 1px, transparent 1px),
+    var(--ascii-bg) !important;
+  background-size: 22px 22px, 22px 22px, auto !important;
+  color: var(--ascii-text);
+  font-family: var(--ascii-mono) !important;
+  letter-spacing: .005em;
+}
+
+body.ascii-ui-enabled *:not(svg):not(path) {
+  font-family: var(--ascii-mono);
+}
+
+body.ascii-ui-enabled .site-header {
+  background: color-mix(in srgb, var(--ascii-bg) 91%, transparent);
+  border-bottom: 0;
+  backdrop-filter: blur(10px);
+}
+
+body.ascii-ui-enabled .header-inner {
+  min-height: 62px;
+}
+
+body.ascii-ui-enabled .brand {
+  color: var(--ascii-green);
+  letter-spacing: .04em;
+}
+
+body.ascii-ui-enabled .brand-mark {
+  border-radius: 0;
+  border: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ascii-green);
+}
+
+body.ascii-ui-enabled .brand-mark::before { content: "<"; }
+body.ascii-ui-enabled .brand-mark::after { content: "/>"; }
+
+body.ascii-ui-enabled .nav {
+  gap: 2px;
+}
+
+body.ascii-ui-enabled .nav a,
+body.ascii-ui-enabled .nav button {
+  border-radius: 0;
+  background: transparent;
+  padding: 7px 8px;
+  color: var(--ascii-muted);
+  font-size: .78rem;
+  text-transform: uppercase;
+}
+
+body.ascii-ui-enabled .nav a::before,
+body.ascii-ui-enabled .nav button::before { content: "["; color: var(--ascii-dim); }
+body.ascii-ui-enabled .nav a::after,
+body.ascii-ui-enabled .nav button::after { content: "]"; color: var(--ascii-dim); }
+
+body.ascii-ui-enabled .nav a:hover,
+body.ascii-ui-enabled .nav a[aria-current="page"],
+body.ascii-ui-enabled .nav button:hover {
+  color: var(--ascii-green);
+  background: transparent;
+  text-shadow: var(--ascii-glow);
+}
+
+body.ascii-ui-enabled .nav .hire-link {
+  color: var(--ascii-bg);
+  background: var(--ascii-green);
+}
+body.ascii-ui-enabled .nav .hire-link::before,
+body.ascii-ui-enabled .nav .hire-link::after { color: currentColor; }
+
+body.ascii-ui-enabled .ascii-mode-toggle {
+  color: var(--ascii-gold) !important;
+}
+
+/* Full page boot banner. Actual ASCII text inserted by JS. */
+.ascii-page-banner {
+  width: min(calc(100% - 32px), 1180px);
+  margin: 24px auto 0;
+  overflow: hidden;
+  color: var(--ascii-green);
+  text-shadow: var(--ascii-glow);
+  white-space: pre;
+  font: 700 clamp(.52rem, 1.15vw, .86rem)/1.08 var(--ascii-mono);
+  user-select: text;
+}
+
+.ascii-page-banner .ascii-page-kicker {
+  color: var(--ascii-cyan);
+}
+
+/* Dynamic character frames. */
+.ascii-box {
+  position: relative;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--ascii-panel-soft) !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.ascii-frame-top,
+.ascii-frame-bottom {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: var(--ascii-green);
+  white-space: pre;
+  font: 700 .78rem/1 var(--ascii-mono);
+  letter-spacing: 0;
+  text-shadow: var(--ascii-glow);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ascii-frame-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-.25em);
+}
+
+.ascii-frame-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(.25em);
+}
+
+.ascii-box-label {
+  display: block;
+  margin: 0 0 12px;
+  color: var(--ascii-gold);
+  font: 800 .69rem/1.3 var(--ascii-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.ascii-box-label::before { content: ">> "; color: var(--ascii-green); }
+.ascii-box-label::after { content: " ::"; color: var(--ascii-dim); }
+
+/* Section separators. */
+.ascii-section-rule {
+  width: min(calc(100% - 32px), 1180px);
+  margin: 42px auto -42px;
+  overflow: hidden;
+  color: var(--ascii-dim);
+  white-space: pre;
+  font: 700 .72rem/1 var(--ascii-mono);
+  letter-spacing: 0;
+  user-select: none;
+}
+
+body.ascii-ui-enabled section {
+  position: relative;
+}
+
+body.ascii-ui-enabled .eyebrow {
+  color: var(--ascii-cyan);
+  letter-spacing: .08em;
+}
+body.ascii-ui-enabled .eyebrow::before { content: "::"; width: auto; background: none; }
+body.ascii-ui-enabled .eyebrow::after { content: "::"; color: var(--ascii-dim); }
+
+body.ascii-ui-enabled h1,
+body.ascii-ui-enabled h2,
+body.ascii-ui-enabled h3 {
+  color: var(--ascii-text);
+  text-transform: none;
+}
+
+body.ascii-ui-enabled h2::before { content: "# "; color: var(--ascii-green); }
+body.ascii-ui-enabled h3::before { content: "> "; color: var(--ascii-green); }
+
+body.ascii-ui-enabled .gradient-text {
+  color: var(--ascii-green) !important;
+  background: none !important;
+  -webkit-text-fill-color: currentColor;
+  text-shadow: var(--ascii-glow);
+}
+
+body.ascii-ui-enabled p,
+body.ascii-ui-enabled .hero-copy,
+body.ascii-ui-enabled .os-copy,
+body.ascii-ui-enabled .lede {
+  color: var(--ascii-muted);
+}
+
+/* Buttons become true text-mode controls. */
+body.ascii-ui-enabled .btn,
+body.ascii-ui-enabled .inline-link,
+body.ascii-ui-enabled .filter-button,
+body.ascii-ui-enabled .command-item,
+body.ascii-ui-enabled .repo-row-link {
+  border-radius: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--ascii-green) !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  transform: none !important;
+}
+
+body.ascii-ui-enabled .btn::before,
+body.ascii-ui-enabled .inline-link::before,
+body.ascii-ui-enabled .filter-button::before { content: "[ "; color: var(--ascii-dim); }
+body.ascii-ui-enabled .btn::after,
+body.ascii-ui-enabled .inline-link::after,
+body.ascii-ui-enabled .filter-button::after { content: " ]"; color: var(--ascii-dim); }
+
+body.ascii-ui-enabled .btn:hover,
+body.ascii-ui-enabled .inline-link:hover,
+body.ascii-ui-enabled .filter-button:hover,
+body.ascii-ui-enabled .filter-button.active {
+  color: var(--ascii-gold) !important;
+  text-shadow: 0 0 14px color-mix(in srgb, var(--ascii-gold) 30%, transparent);
+}
+
+body.ascii-ui-enabled .badge,
+body.ascii-ui-enabled .tag {
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  padding: 2px 4px;
+}
+body.ascii-ui-enabled .tag::before { content: "<"; color: var(--ascii-dim); }
+body.ascii-ui-enabled .tag::after { content: ">"; color: var(--ascii-dim); }
+body.ascii-ui-enabled .badge::before { content: "*"; width: auto; height: auto; background: none; }
+
+/* Flatten the sleek card language into terminal nodes. */
+body.ascii-ui-enabled .card,
+body.ascii-ui-enabled .portal,
+body.ascii-ui-enabled .capability,
+body.ascii-ui-enabled .project-row,
+body.ascii-ui-enabled .repo-tile,
+body.ascii-ui-enabled .evidence-panel,
+body.ascii-ui-enabled .cta,
+body.ascii-ui-enabled .manifesto,
+body.ascii-ui-enabled .hero-panel,
+body.ascii-ui-enabled .os-terminal,
+body.ascii-ui-enabled .resume-sidebar,
+body.ascii-ui-enabled .resume-section,
+body.ascii-ui-enabled .resume-entry {
+  border-radius: 0 !important;
+  border-color: transparent !important;
+  background: var(--ascii-panel-soft) !important;
+  box-shadow: none !important;
+}
+
+body.ascii-ui-enabled .card:hover,
+body.ascii-ui-enabled .portal:hover,
+body.ascii-ui-enabled .repo-tile:hover,
+body.ascii-ui-enabled .project-row:hover {
+  transform: none !important;
+}
+
+/* The big COSMOS console becomes a real text terminal. */
+body.ascii-ui-enabled .os-terminal {
+  min-height: 0;
+}
+body.ascii-ui-enabled .os-terminal::before { display: none; }
+body.ascii-ui-enabled .os-terminal-head {
+  border-bottom: 0;
+  color: var(--ascii-cyan);
+}
+body.ascii-ui-enabled .os-terminal-head::before { content: "╔═[ "; color: var(--ascii-green); }
+body.ascii-ui-enabled .os-terminal-head::after { content: " ]═╗"; color: var(--ascii-green); }
+body.ascii-ui-enabled .ascii-core {
+  color: var(--ascii-green);
+  text-shadow: var(--ascii-glow);
+}
+body.ascii-ui-enabled .boot-log {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+body.ascii-ui-enabled .boot-log span::before { content: "├─ "; color: var(--ascii-dim); }
+body.ascii-ui-enabled .os-prompt::before { content: "└─ "; color: var(--ascii-dim); }
+
+/* Stats read like telemetry rows. */
+body.ascii-ui-enabled .stat-strip,
+body.ascii-ui-enabled .signal-strip {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  gap: 4px;
+}
+body.ascii-ui-enabled .stat,
+body.ascii-ui-enabled .signal {
+  background: transparent;
+  padding: 10px 4px;
+}
+body.ascii-ui-enabled .stat::before,
+body.ascii-ui-enabled .signal::before { content: "[+] "; color: var(--ascii-green); }
+
+/* Repository universe: static source graph remains clickable, but becomes text-mode. */
+body.ascii-ui-enabled .constellation {
+  height: auto !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 28px 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--ascii-panel-soft) !important;
+  box-shadow: none !important;
+}
+body.ascii-ui-enabled .constellation::before,
+body.ascii-ui-enabled .orbit-ring,
+body.ascii-ui-enabled .constellation-core { display: none !important; }
+body.ascii-ui-enabled .repo-orb {
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  aspect-ratio: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  display: block !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 8px 6px;
+  text-align: left;
+}
+body.ascii-ui-enabled .repo-orb::before { content: "├──[ "; color: var(--ascii-dim); }
+body.ascii-ui-enabled .repo-orb::after { content: " ]"; color: var(--ascii-dim); }
+body.ascii-ui-enabled .repo-orb:hover { transform: none !important; color: var(--ascii-gold); }
+body.ascii-ui-enabled .repo-orb strong { color: var(--ascii-green); }
+body.ascii-ui-enabled .repo-orb span::before { content: " :: "; color: var(--ascii-dim); }
+
+.ascii-constellation-map {
+  grid-column: 1 / -1;
+  overflow-x: auto;
+  margin: 0 0 10px;
+  color: var(--ascii-cyan);
+  white-space: pre;
+  font: 700 clamp(.48rem, 1.18vw, .79rem)/1.1 var(--ascii-mono);
+  text-shadow: 0 0 14px rgba(115,223,255,.12);
+}
+
+body.ascii-ui-enabled .repo-list {
+  border: 0;
+  border-radius: 0;
+  background: var(--ascii-panel-soft);
+}
+body.ascii-ui-enabled .repo-list a {
+  border: 0;
+  padding: 10px 12px;
+}
+body.ascii-ui-enabled .repo-list a::before { content: "├── "; color: var(--ascii-dim); }
+body.ascii-ui-enabled .repo-list a:last-child::before { content: "└── "; }
+body.ascii-ui-enabled .repo-list a:hover { background: transparent; color: var(--ascii-gold); }
+
+/* Resume keeps structure and print behavior, just goes text-mode. */
+body.ascii-ui-enabled .resume-sidebar {
+  border-right: 0;
+}
+body.ascii-ui-enabled .resume-entry {
+  padding: 12px 8px !important;
+}
+body.ascii-ui-enabled .resume-entry::before {
+  content: "├─";
+  color: var(--ascii-dim);
+  margin-right: 8px;
+}
+body.ascii-ui-enabled .when {
+  color: var(--ascii-gold);
+}
+body.ascii-ui-enabled .skill-list {
+  gap: 3px;
+}
+
+/* Command palette becomes a command line. */
+body.ascii-ui-enabled .command-palette {
+  background: rgba(0, 4, 2, .78);
+}
+body.ascii-ui-enabled .command-box {
+  border-radius: 0;
+  border: 0;
+  background: var(--ascii-bg);
+  box-shadow: none;
+}
+body.ascii-ui-enabled .command-box::before {
+  content: "┌─[ PORTFOLIO COMMAND BUS ]──────────────────────────────┐";
+  display: block;
+  color: var(--ascii-green);
+  padding: 10px 14px 0;
+  white-space: pre;
+}
+body.ascii-ui-enabled .command-input {
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ascii-green);
+}
+body.ascii-ui-enabled .command-input::placeholder { color: var(--ascii-dim); }
+body.ascii-ui-enabled .command-item::before { content: "> "; color: var(--ascii-green); }
+
+/* Footer = final terminal record. */
+body.ascii-ui-enabled .site-footer {
+  border-top: 0;
+}
+body.ascii-ui-enabled .site-footer::before {
+  content: "└──────────────────────────── END OF PUBLIC BUFFER ────────────────────────────┘";
+  display: block;
+  width: min(calc(100% - 32px), 1180px);
+  margin: 0 auto 18px;
+  overflow: hidden;
+  white-space: pre;
+  color: var(--ascii-dim);
+  font: 700 .72rem/1 var(--ascii-mono);
+}
+
+.ascii-status-line {
+  position: fixed;
+  right: 10px;
+  bottom: 8px;
+  z-index: 700;
+  padding: 4px 7px;
+  background: var(--ascii-bg);
+  color: var(--ascii-green);
+  font: 700 .63rem/1 var(--ascii-mono);
+  pointer-events: none;
+  opacity: .78;
+}
+.ascii-status-line::before { content: "[ASCII://"; color: var(--ascii-dim); }
+.ascii-status-line::after { content: "]"; color: var(--ascii-dim); }
+
+/* Original look remains recoverable without touching source. */
+body.ascii-ui-disabled .ascii-page-banner,
+body.ascii-ui-disabled .ascii-section-rule,
+body.ascii-ui-disabled .ascii-frame-top,
+body.ascii-ui-disabled .ascii-frame-bottom,
+body.ascii-ui-disabled .ascii-box-label,
+body.ascii-ui-disabled .ascii-constellation-map,
+body.ascii-ui-disabled .ascii-status-line { display: none !important; }
+
+@media (max-width: 980px) {
+  body.ascii-ui-enabled .constellation { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ascii-section-rule { margin-top: 28px; margin-bottom: -28px; }
+}
+
+@media (max-width: 720px) {
+  .ascii-page-banner { font-size: clamp(.38rem, 1.6vw, .58rem); margin-top: 14px; }
+  .ascii-frame-top, .ascii-frame-bottom { font-size: .62rem; }
+  .ascii-section-rule { font-size: .58rem; }
+  body.ascii-ui-enabled .constellation { grid-template-columns: 1fr; padding-inline: 8px !important; }
+  .ascii-constellation-map { font-size: clamp(.36rem, 1.55vw, .54rem); }
+  body.ascii-ui-enabled .nav a,
+  body.ascii-ui-enabled .nav button { font-size: .72rem; }
+  .ascii-status-line { display: none; }
+}
+
+@media print {
+  body.ascii-ui-enabled {
+    background: white !important;
+    color: black !important;
+  }
+  .ascii-page-banner,
+  .ascii-section-rule,
+  .ascii-status-line { color: #222 !important; text-shadow: none !important; }
+  .ascii-mode-toggle { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.ascii-ui-enabled * { animation: none !important; transition: none !important; }
+}
