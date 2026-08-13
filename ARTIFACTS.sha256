@@ -1,0 +1,10 @@
+# SHA-256 manifest for source publication artifacts
+# Generated from exact bytes in Cory Davis's source document library on 2026-08-12.
+# These hashes identify source binaries. A hash proves byte identity/integrity, not scientific truth or authorship by itself.
+# Binary files are cataloged in PUBLICATIONS.md. When a binary is not stored in this Git repository, verify it against the named source/download copy.
+
+26292a4e63b3fa5838865fc384682049a93a0e159f72359ec2977be4da46a36a  SOURCE_LIBRARY/COSMOS_CST_UNIVERSE_MANUAL.docx
+eee3cb7bac40d20b1481c1a88701a58dabe6739cb151e058c23ba8cbb04d450f  SOURCE_LIBRARY/Reality_Bridge_Alien_Conductor_Local_AI_Band_Engineering_Book(1).docx
+6628ae27052f7ad57ac971a2d3d78ec6aa732f42bcbd12180ca7e38f0796566c  SOURCE_LIBRARY/HEHS_v2_Engineering_Prototype_Guide.docx
+2b316c4d1cc31fce51b70fc2a3fbd555e0569517a22a937f59505bd3b6c0b7e6  SOURCE_LIBRARY/HEHS_v2_Engineering_Prototype_Guide.pdf
+b0e572dcc334aca09396695583075080f4dfe953b42e964fce5964b9fb8033a3  SOURCE_LIBRARY/HEHS_Weekend_Prototype_Guide.md.pdf
