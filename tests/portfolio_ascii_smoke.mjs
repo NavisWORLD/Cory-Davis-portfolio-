@@ -25,6 +25,10 @@ const requiredRecords = [
   'EVIDENCE.md',
   'PROVENANCE.md',
   'ARTIFACTS.sha256',
+  'WORD_LIBRARY_2026-08-12.md',
+  'WORD_LIBRARY_2026-08-12.sha256',
+  'archive/2026-08-12/README.md',
+  'archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256',
   'CITATION.cff',
   'publications/README.md',
   'publications/COSMOS_CST_UNIVERSE_MANUAL_READER.md',
@@ -40,6 +44,9 @@ const fail = (message) => {
   process.exitCode = 1;
 };
 const pass = (message) => console.log(`PASS: ${message}`);
+const manifestLines = (file) => fs.readFileSync(path.join(root, file), 'utf8')
+  .split(/\r?\n/)
+  .filter((line) => line.trim() && !line.trimStart().startsWith('#'));
 
 for (const file of [...requiredPages, ...requiredRuntime, ...requiredRecords]) {
   if (!fs.existsSync(path.join(root, file))) fail(`missing required file: ${file}`);
@@ -109,6 +116,38 @@ for (const digest of expectedHashes) {
   else pass(`artifact digest present ${digest.slice(0, 12)}…`);
 }
 
+const wordLines = manifestLines('WORD_LIBRARY_2026-08-12.sha256');
+if (wordLines.length !== 25) fail(`Word library manifest should contain 25 artifacts, found ${wordLines.length}`);
+else pass('Word library manifest contains all 25 DOCX artifacts');
+const wordCatalog = fs.readFileSync(path.join(root, 'WORD_LIBRARY_2026-08-12.md'), 'utf8');
+for (const needle of [
+  '00 - START HERE - Cory Davis Public Portfolio Index.docx',
+  '22 - COSMOS Teacher Lab Workbook.docx',
+  '24 - COSMOS Career OS Licensing Boundary.docx',
+  '809f72846e8343c830f5fa8f5b9e4fe6c4c0ce96bfadef1f687306b7dd6797dd',
+  'b3fa81006fe88e281d5e7af6102df954247a8da634c23f06d07dec5c93efc050',
+]) {
+  if (!wordCatalog.includes(needle)) fail(`Word library catalog missing ${needle}`);
+  else pass(`Word catalog contains ${needle.slice(0, 48)}`);
+}
+
+const sourceLines = manifestLines('archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256');
+if (sourceLines.length !== 52) fail(`Teaching source manifest should contain 52 documents, found ${sourceLines.length}`);
+else pass('Teaching/manual source manifest contains all 52 dated source documents');
+const archiveIndex = fs.readFileSync(path.join(root, 'archive/2026-08-12/README.md'), 'utf8');
+for (const family of ['COSMOS / CST', 'COSMOS HEARTLIGHT', 'COSMOS Music Open Suite', 'Reality Bridge / Alien Conductor', 'Universe / simulation']) {
+  if (!archiveIndex.includes(family)) fail(`dated archive index missing source family ${family}`);
+  else pass(`dated archive maps ${family}`);
+}
+
+for (const page of ['publications.html', 'proof.html', 'timeline.html']) {
+  const source = fs.readFileSync(path.join(root, page), 'utf8');
+  if (!source.includes('WORD_LIBRARY_2026-08-12')) fail(`${page} does not expose complete Word corpus`);
+  else pass(`${page} exposes complete Word corpus`);
+  if (!source.includes('archive/2026-08-12')) fail(`${page} does not expose dated teaching archive`);
+  else pass(`${page} exposes dated teaching archive`);
+}
+
 const universe = fs.readFileSync(path.join(root, 'REPOSITORY_UNIVERSE.md'), 'utf8');
 for (const repo of ['COSMOS-HEARTLIGHT', 'Cosmic-quantum-video-picture-generator-', 'hermes-agent']) {
   if (!universe.includes(repo)) fail(`repository universe missing ${repo}`);
@@ -126,5 +165,5 @@ for (const phrase of ['claims follow instrumentation', 'HISTORICAL / SUPERSEDED'
 }
 
 if (!process.exitCode) {
-  console.log('\nPORTFOLIO OS + ASCII + PUBLIC RECORD SMOKE TEST: PASS');
+  console.log('\nPORTFOLIO OS + ASCII + PUBLIC RECORD + DOCUMENT ARCHIVE SMOKE TEST: PASS');
 }
