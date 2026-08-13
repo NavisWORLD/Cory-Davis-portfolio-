@@ -4,10 +4,10 @@
   const savedTheme = localStorage.getItem(themeKey);
   if (savedTheme === 'light' || savedTheme === 'dark') root.dataset.theme = savedTheme;
 
-  // Load the Portfolio OS layer on pages that opt into it. Index already links
-  // these assets directly; Works/Universe use this loader to avoid duplicating
-  // the base application runtime.
-  const osPage = ['home', 'works', 'universe'].includes(document.body?.dataset?.page || '');
+  // Load the richer Portfolio OS visual layer where it adds value. The ASCII
+  // interface is loaded independently for every page near the end of this file.
+  const osPage = ['home', 'works', 'universe', 'publications', 'timeline', 'proof', 'offerings']
+    .includes(document.body?.dataset?.page || '');
   if (osPage && !document.querySelector('link[href="os.css"]')) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -45,9 +45,17 @@
     const before = nav.querySelector(`a[href="${beforeHref}"]`) || nav.querySelector('.hire-link') || null;
     nav.insertBefore(link, before);
   };
+
+  // Core portfolio routes.
   insertNavLink('library.html', 'Library');
   insertNavLink('universe.html', 'Repo Universe', 'library.html');
   insertNavLink('works.html', 'Works', 'universe.html');
+
+  // Canonical public-record routes added in the 2026-08 portfolio consolidation.
+  insertNavLink('publications.html', 'Publications', 'resume.html');
+  insertNavLink('timeline.html', 'Timeline', 'resume.html');
+  insertNavLink('proof.html', 'Proof', 'resume.html');
+  insertNavLink('offerings.html', 'What I Offer', 'resume.html');
 
   if (nav && !nav.querySelector('[data-menu-toggle]')) {
     const menuButton = document.createElement('button');
@@ -107,8 +115,8 @@
       link.className = 'btn';
       link.dataset.download = marker;
       link.href = href;
-      link.target = '_blank';
-      link.rel = 'noreferrer';
+      link.target = href.startsWith('http') ? '_blank' : '';
+      if (link.target) link.rel = 'noreferrer';
       link.textContent = text;
       heroActions.appendChild(link);
     };
@@ -132,6 +140,8 @@
       'dyn12 PyTorch source ZIP ↗',
       'dyn12-zip'
     );
+    addHeroDownload('publications.html', 'Publication + hash archive →', 'publication-archive');
+    addHeroDownload('proof.html', 'Proof ledger →', 'proof-ledger');
   }
 
   if (savedTheme === 'light' || savedTheme === 'dark') setTheme(savedTheme);
@@ -206,6 +216,10 @@
   addCommand('works.html', 'Books, worlds, visual systems, tools', 'WORKS');
   addCommand('universe.html', 'Repository universe', 'REPOS');
   addCommand('library.html', 'Open-source engineering library', 'LIBRARY');
+  addCommand('publications.html', 'Publications, manuals, source hashes', 'PUBS');
+  addCommand('timeline.html', 'Career + research + public artifact timeline', 'TIME');
+  addCommand('proof.html', 'Proof ledger, hashes, DOI, evidence', 'PROOF');
+  addCommand('offerings.html', 'What Cory can build / hiring map', 'OFFER');
 
   const commandItems = [...document.querySelectorAll('[data-command-item]')];
 
@@ -267,20 +281,19 @@
   if (year) year.textContent = new Date().getFullYear();
 
   // Full Portfolio ASCII interface. This is intentionally loaded for EVERY page
-  // that uses app.js. The existing DOM remains untouched as the source of truth;
-  // ascii-ui.js decorates nodes in place and can be toggled off with A or the
-  // ASCII:ON control without deleting or rewriting any content.
+  // that uses app.js. The existing DOM remains the source of truth; ascii-ui.js
+  // decorates nodes in place and can be toggled off with A or the ASCII control.
   const loadAsciiInterface = () => {
     if (!document.querySelector('link[data-ascii-ui]')) {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'ascii-ui.css?v=20260812';
+      link.href = 'ascii-ui.css?v=20260812-record';
       link.dataset.asciiUi = 'true';
       document.head.appendChild(link);
     }
     if (!document.querySelector('script[data-ascii-ui]')) {
       const script = document.createElement('script');
-      script.src = 'ascii-ui.js?v=20260812';
+      script.src = 'ascii-ui.js?v=20260812-record';
       script.dataset.asciiUi = 'true';
       script.defer = true;
       document.body.appendChild(script);
