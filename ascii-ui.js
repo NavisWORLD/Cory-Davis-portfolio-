@@ -15,6 +15,10 @@
     if (path.endsWith('universe.html')) return 'REPOSITORY_UNIVERSE';
     if (path.endsWith('library.html')) return 'OPEN_LIBRARY';
     if (path.endsWith('resume.html')) return 'RESUME';
+    if (path.endsWith('publications.html')) return 'PUBLICATIONS';
+    if (path.endsWith('timeline.html')) return 'TIMELINE';
+    if (path.endsWith('proof.html')) return 'PROOF';
+    if (path.endsWith('offerings.html')) return 'OFFERINGS';
     return 'HOME';
   })();
 
@@ -60,7 +64,22 @@
   ██████╔╝█████╗  ███████╗██║   ██║██╔████╔██║█████╗
   ██╔══██╗██╔══╝  ╚════██║██║   ██║██║╚██╔╝██║██╔══╝
   ██║  ██║███████╗███████║╚██████╔╝██║ ╚═╝ ██║███████╗
-  ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝`
+  ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝`,
+    PUBLICATIONS: String.raw`
+  ┌──────────────────────────────────────────────────────────────────────────┐
+  │ PUBLICATIONS // BOOKS // MANUALS // PAPERS // HASHED SOURCE EDITIONS    │
+  └──────────────────────────────────────────────────────────────────────────┘`,
+    TIMELINE: String.raw`
+  2012 ── SERVICE ── 2018 ── CST ── 2024 ── DOI ── 2025 ── GIT ── 2026 ── OPEN SYSTEMS
+          ╰──────────────── CAREER + RESEARCH + PUBLIC ARTIFACT CLOCKS ───────────────╯`,
+    PROOF: String.raw`
+  ┌─[ PROOF_OS ]─────────────────────────────────────────────────────────────┐
+  │ ARTIFACT → SHA-256   VERSION → GIT   RECORD → DOI   CLAIM → TEST/NULL  │
+  └──────────────────────────────────────────────────────────────────────────┘`,
+    OFFERINGS: String.raw`
+  ┌─[ WHAT I CAN BUILD ]────────────────────────────────────────────────────┐
+  │ AI + STATE + MEMORY + REALTIME + MEDIA + HARDWARE + DOCS + EVALUATION │
+  └──────────────────────────────────────────────────────────────────────────┘`
   };
 
   const make = (tag, className, text = '') => {
@@ -131,8 +150,6 @@
     const bottom = el.querySelector(':scope > .ascii-frame-bottom');
     if (!top || !bottom) return;
 
-    // The frame itself uses ~.78rem monospace; ~7.4px/character is a robust
-    // cross-platform approximation. The line is decoration, not layout.
     const chars = Math.max(14, Math.min(170, Math.floor(el.getBoundingClientRect().width / 7.4) - 2));
     const label = cleanLabel(el.querySelector(':scope > .ascii-box-label')?.textContent || 'NODE');
     const prefix = `┌─[${label}]`;
@@ -174,30 +191,29 @@
     map.textContent = String.raw`
                                       [ CORY.DAVIS ]
                                             │
-                 ┌──────────────────────────┼──────────────────────────┐
-                 │                          │                          │
-             [ COSMOS ]                  [ CST ]                  [ DYN12 ]
-                 │                          │                          │
-      ┌──────────┼──────────┐         ┌─────┴─────┐           ┌────────┴────────┐
-      │          │          │         │           │           │                 │
-   [MEMORY]    [CNS]     [SENSORY]  [A-LMI]   [THEORY]    [TRANSFORMER]     [PROOF]
-      │                     │                                      │
-      └──────────┬──────────┘                                      │
-                 │                                                 │
-           [ LOCAL RUNTIME ]                                       │
-                 │                                                 │
-                 └───────────────────────┬─────────────────────────┘
+              ┌─────────────────────────────┼─────────────────────────────┐
+              │                             │                             │
+          [ COSMOS ]                     [ CST ]                       [ DYN12 ]
+              │                             │                             │
+   ┌──────────┼──────────┐            ┌─────┴─────┐              ┌────────┴────────┐
+   │          │          │            │           │              │                 │
+[MEMORY]    [CNS]    [SENSORY]     [A-LMI]   [THEORY]       [TRANSFORMER]       [PROOF]
+   │                     │                                           │
+   └──────────┬──────────┘                                           │
+              │                                                      │
+        [ LOCAL RUNTIME ]                                            │
+              └────────────────────────┬─────────────────────────────┘
+                                       │
+                            [ PUBLIC ENGINEERING ]
+                                       │
+       ┌───────────────────────┬───────┴─────────┬──────────────────────┐
+       │                       │                 │                      │
+[ALIEN CONDUCTOR]       [REALITY BRIDGE]   [HEARTLIGHT]          [COSMOS MEDIA]
+       │                       │                 │                      │
+ [MUSIC / AUDIO]         [SIM / VISUALS]  [ACCESSIBILITY]       [IMAGE / VIDEO]
+       └───────────────────────┴──────────┬──────┴──────────────────────┘
                                          │
-                              [ PUBLIC ENGINEERING ]
-                                         │
-                       ┌─────────────────┴────────────────┐
-                       │                                  │
-                [ ALIEN CONDUCTOR ]               [ REALITY BRIDGE ]
-                       │                                  │
-                  [ MUSIC / AI ]                  [ SIM / VISUALS ]
-                       └─────────────────┬────────────────┘
-                                         │
-                              [ LIBRARIES / MANUALS ]`;
+                          [ LIBRARIES / MANUALS / HASHES ]`;
     constellation.prepend(map);
   };
 
@@ -269,7 +285,7 @@
   });
 
   // App.js may add page-specific links synchronously. A short observer catches
-  // any later UI insertions without replacing or destroying the original nodes.
+  // later UI insertions without replacing or destroying original nodes.
   const observer = new MutationObserver(() => {
     frameTargets().forEach(ensureFrame);
     renderAllFrames();
