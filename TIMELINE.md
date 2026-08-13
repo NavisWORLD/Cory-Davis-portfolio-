@@ -1,13 +1,13 @@
 # CORY DAVIS // CAREER + RESEARCH + PUBLIC ARTIFACT TIMELINE
 
 ```text
-2012 ── electronics/service ── 2018 ── CST lineage ── 2024 ── deposit ── 2025 ── public code ── 2026 ── open engineering constellation
+2012 ── electronics/service ── 2018 ── CST lineage ── 2024 ── deposit ── 2025 ── public code ── 2026 ── open engineering + teaching corpus
 ```
 
 This timeline intentionally uses **two clocks**:
 
 - **Research lineage date** — a date stated in project manuals/archives. It records the project's internal history and is labeled as such.
-- **Public artifact date** — a date independently visible in GitHub/deposit metadata. It records when a public repository or deposited artifact became externally timestamped.
+- **Public artifact date** — a date independently visible in GitHub, Drive, or deposit metadata. It records when a public repository, document, or deposited artifact became externally timestamped.
 
 A repository created in 2026 does not imply the underlying idea began in 2026, and a historical date written in a manual is not treated as equivalent to an independently timestamped public artifact.
 
@@ -100,7 +100,7 @@ The same documentation preserves mechanism failures such as wrong-axis state col
 
 ## 2026-08-12 / 2026-08-13 UTC // Full public-disclosure engineering sprint
 
-GitHub timestamps cross midnight UTC while the work was still occurring on August 12 in America/Chicago. Dates below use the GitHub UTC creation date where relevant.
+GitHub timestamps cross midnight UTC while the work was still occurring on August 12 in America/Chicago. Dates below use the GitHub/Drive timestamp where relevant and retain the local-session date as August 12.
 
 ### Public music / book / portfolio surfaces
 - `-reality-bridge-alien-conductor-local-ai-band`
@@ -123,6 +123,28 @@ Inclusive classroom/accessibility support technology built as a local-first PWA 
 
 ### 2026-08-13 UTC — `Cosmic-quantum-video-picture-generator-`
 Local-first media engine/integration layer with native rendering, deterministic provenance receipts, stateful continuity, computational branch search, resumable long-form chunking, storybook workflows, PWA, Rust/C++ reference cores, and optional IBM Quantum entropy/provenance.
+
+### August 12 document corpus — 00–24 Word library
+A public 25-document DOCX set was assembled as the recruiter/reviewer/teacher-facing documentation spine. It includes:
+
+- public portfolio index, résumé, and portfolio master;
+- COSMOS architecture, install/build/recovery, claims/evidence matrix, engineering loops, persistent memory, CNS, quantum/Azure heartbeat, sensory/bio integration, music, simulation, validation/failure, CLI/runtime, safe autonomy, and Python/library vocabulary;
+- CST technical primer and falsifiability guide;
+- Reality Bridge evidence and prediction research instrument;
+- open-source COSMOS/CST engineering course and reference-implementation index;
+- teacher/reviewer guide and teacher lab workbook;
+- release/publication checklist and licensing boundary.
+
+The exact source binaries were fetched from the public Drive library and SHA-256 fingerprinted. Canonical catalog: [`WORD_LIBRARY_2026-08-12.md`](WORD_LIBRARY_2026-08-12.md). Hash manifest: [`WORD_LIBRARY_2026-08-12.sha256`](WORD_LIBRARY_2026-08-12.sha256).
+
+### August 12 teaching / study / manual source snapshot
+The generated COSMOS/CST disclosure kit, HEARTLIGHT kit, COSMOS Music Open Suite, Alien Conductor repo package, and Universe rebuild package yielded **52 Markdown source documents** in the dated bundle snapshot.
+
+The snapshot includes teacher guides, student guides, study arcs, behavioral-aide guidance, stimming guidance, therapy usage guidance, clinician material, privacy/safety, validation, architecture, API/mobile integration, open-disclosure material, memory/Azure/Heart Bridge guides, book chapters, build and reproduction material, licensing/source packaging, and universe-engine maps.
+
+Canonical archive map: [`archive/2026-08-12/README.md`](archive/2026-08-12/README.md). Source-byte fingerprint manifest: [`archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256`](archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256).
+
+The live project repositories may contain later additions beyond the dated snapshot. The dated hashes preserve what the generated bundle contained during this portfolio pass.
 
 ### Portfolio OS
 The portfolio itself was rebuilt into an ASCII-first usable interface while retaining its original DOM and visual layer underneath. Integrity and ASCII smoke-test GitHub Actions were added to prevent presentation changes from silently destroying the content/navigation layer.
@@ -157,6 +179,8 @@ find dead mechanisms and nulls
 correct them
    ↓
 split the surviving mechanisms into reusable public tools
+   ↓
+write manuals, teacher guides, study material, and reproducible archives
    ↓
 document enough for another engineer to rebuild or reject them
 ```
