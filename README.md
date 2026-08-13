@@ -10,11 +10,12 @@
 │ realtime_audio......... PLAYABLE                                             │
 │ simulation............. RENDERING                                             │
 │ accessibility.......... HUMAN_REVIEWED                                       │
+│ memorial_continuity.... FAMILY_GOVERNED                                      │
 │ media_engine........... CONTINUITY+RECEIPTS                                  │
 │ hardware............... MEASURE_FIRST                                        │
 │ manuals................ HASH_ANCHORED                                         │
 │ evidence_policy........ NULLS_PRESERVED                                      │
-│ public_repositories.... 24                                                    │
+│ public_repositories.... 25                                                    │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │ PRIME DIRECTIVE: BUILD STRANGE // MEASURE HARD // LEAVE A MAP              │
 └──────────────────────────────────────────────────────────────────────────────┘
@@ -23,7 +24,7 @@
 **Cory Shane Davis**  
 AI Systems Builder · Independent Researcher · Electronics & Technical Operations · Creative Computing
 
-I build where boundaries collide: **local AI, persistent memory, adaptive model state, realtime audio, simulation, generative media, accessibility/support technology, electronics, and the documentation needed for another engineer to reproduce or reject the result.**
+I build where boundaries collide: **local AI, persistent memory, adaptive model state, realtime audio, simulation, generative media, accessibility/support technology, memorial-continuity tooling, electronics, and the documentation needed for another engineer to reproduce or reject the result.**
 
 This repository is not a landing page pointing vaguely at a body of work. It is the public navigation and provenance layer for that body of work.
 
@@ -84,6 +85,7 @@ messy idea / broken prototype / research question
 - **Generative media engines** — continuity state, deterministic receipts, computational branch search, resumable long-form video/storybook workflows, provider-neutral HTTP/JSONL integration.
 - **Cross-language engineering** — Python, browser JavaScript/HTML, C++17/native cores, Rust/FFI, C ABI, CMake/Cargo, JSON contracts, CI, migrations.
 - **Accessibility / human-centered technology** — offline/local-first communication support, privacy-by-architecture, human-reviewed workflows, explicit no-diagnosis/no-discipline boundaries.
+- **Memorial / continuity technology** — consented family archives, provenance, grounded memorial profiles, optional heartbeat-derived rhythm signatures, local-first storage, deletion/silence controls, and explicit no-resurrection/no-impersonation boundaries.
 - **Electronics / hardware-software integration** — diagnostics, sensors, energy budgets, vibration/energy-harvesting prototypes, bench measurement plans, failure trees.
 - **Technical education** — engineering books, rebuild manuals, teacher guides, study labs, architecture specs, API contracts, troubleshooting trees, evidence/claim matrices.
 
@@ -134,6 +136,14 @@ A local-first inclusive classroom/support-technology reference implementation wi
 HEARTLIGHT is not presented as a medical device, diagnosis engine, behavior-risk predictor, automated discipline system, or automated IEP authority. The product architecture prioritizes learner communication and human review over hidden inference.
 
 Product brief: **[HEARTLIGHT](publications/HEARTLIGHT_PRODUCT_BRIEF.md)**.
+
+## HEARTLIGHT // The Lantern Archive
+
+**Source:** https://github.com/NavisWORLD/Death-on-a-sub-
+
+A family-built, local-first memorial-continuity toolkit for preserving stories, phrases, photographs, videos, values, family lessons, and optional heartbeat-derived rhythm signatures. The repository includes a family-facing Home interface, provenance manifests, append-only family teaching, a deterministic grounded memorial-profile builder, HIP event contracts, optional Azure Blob / IBM Cloud Object Storage mirrors, deployment baselines, cross-language SDK source trees, tests/CI, and family/teacher/science/ethics documentation.
+
+The boundary is non-negotiable: **this is not resurrection, soul recovery, exact-human-identity reconstruction, or deceptive impersonation.** A Lantern is a new computational memorial grounded in supplied records and ongoing family teaching.
 
 ## COSMOS Media // Cosmic Quantum Video & Picture Generator
 
@@ -259,7 +269,7 @@ This prevents a newly created 2026 publication repo from being mistaken for the 
 
 ---
 
-# 07 // COMPLETE PUBLIC REPOSITORY SET — 24
+# 07 // COMPLETE PUBLIC REPOSITORY SET — 25
 
 Current canonical map: **[REPOSITORY_UNIVERSE.md](REPOSITORY_UNIVERSE.md)** / **[universe.html](universe.html)**
 
@@ -287,6 +297,7 @@ Current canonical map: **[REPOSITORY_UNIVERSE.md](REPOSITORY_UNIVERSE.md)** / **
 22. [Cosmic-synapse-the-living-universe-sim-engine-](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-)
 23. [COSMOS-HEARTLIGHT](https://github.com/NavisWORLD/COSMOS-HEARTLIGHT)
 24. [Cosmic-quantum-video-picture-generator-](https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-)
+25. [Death-on-a-sub-](https://github.com/NavisWORLD/Death-on-a-sub-) — HEARTLIGHT // The Lantern Archive
 
 Private repositories and private research/person/family/sensor records are intentionally omitted.
 
@@ -356,6 +367,10 @@ Proof should expose the mechanism, test, version, data fingerprint, and result n
 ### Educator / accessibility reviewer
 
 `COSMOS HEARTLIGHT → HEARTLIGHT product brief → privacy/safety docs in project repo`
+
+### Family / memorial-continuity reviewer
+
+`HEARTLIGHT // The Lantern Archive → family/teacher/science/ethics docs → provenance + consent + deletion boundaries`
 
 ---
 
