@@ -37,6 +37,7 @@ const requiredRecords = [
   'publications/HEHS_V1_TO_V2_CORRECTION_LEDGER.md',
   'publications/HEARTLIGHT_PRODUCT_BRIEF.md',
   'publications/COSMOS_MEDIA_ENGINE_BRIEF.md',
+  'publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md',
 ];
 
 const fail = (message) => {
@@ -67,6 +68,10 @@ else pass('app.js loads ascii-ui.js');
 for (const route of ['publications.html', 'timeline.html', 'proof.html', 'offerings.html']) {
   if (!app.includes(route)) fail(`app.js command/navigation layer missing ${route}`);
   else pass(`app.js exposes ${route}`);
+}
+for (const needle of ['Death-on-a-sub-', 'LANTERN_ARCHIVE_PRODUCT_BRIEF.md', '25 PUBLIC REPOS']) {
+  if (!app.includes(needle)) fail(`app.js final repository sync missing ${needle}`);
+  else pass(`app.js final repository sync contains ${needle}`);
 }
 
 const renderer = fs.readFileSync(path.join(root, 'ascii-ui.js'), 'utf8');
@@ -149,14 +154,20 @@ for (const page of ['publications.html', 'proof.html', 'timeline.html']) {
 }
 
 const universe = fs.readFileSync(path.join(root, 'REPOSITORY_UNIVERSE.md'), 'utf8');
-for (const repo of ['COSMOS-HEARTLIGHT', 'Cosmic-quantum-video-picture-generator-', 'hermes-agent']) {
+for (const repo of ['COSMOS-HEARTLIGHT', 'Cosmic-quantum-video-picture-generator-', 'hermes-agent', 'Death-on-a-sub-']) {
   if (!universe.includes(repo)) fail(`repository universe missing ${repo}`);
   else pass(`repository universe includes ${repo}`);
 }
-if (!/24 public repositories/i.test(universe)) fail('repository universe does not declare 24 public repositories');
-else pass('repository universe declares 24 public repositories');
+if (!/25 public repositories/i.test(universe)) fail('repository universe does not declare 25 public repositories');
+else pass('repository universe declares 25 public repositories');
 if (!/fork\/upstream/i.test(universe)) fail('repository universe does not preserve fork/upstream provenance boundary');
 else pass('fork/upstream provenance boundary is visible');
+
+const lantern = fs.readFileSync(path.join(root, 'publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md'), 'utf8');
+for (const phrase of ['Lantern Archive', 'resurrection', 'deceptive impersonation', 'Azure', 'IBM']) {
+  if (!lantern.toLowerCase().includes(phrase.toLowerCase())) fail(`Lantern Archive brief missing boundary/capability phrase: ${phrase}`);
+  else pass(`Lantern Archive brief contains: ${phrase}`);
+}
 
 const publications = fs.readFileSync(path.join(root, 'PUBLICATIONS.md'), 'utf8');
 for (const phrase of ['claims follow instrumentation', 'HISTORICAL / SUPERSEDED', 'SHA-256']) {
@@ -165,5 +176,5 @@ for (const phrase of ['claims follow instrumentation', 'HISTORICAL / SUPERSEDED'
 }
 
 if (!process.exitCode) {
-  console.log('\nPORTFOLIO OS + ASCII + PUBLIC RECORD + DOCUMENT ARCHIVE SMOKE TEST: PASS');
+  console.log('\nPORTFOLIO OS + ASCII + PUBLIC RECORD + DOCUMENT ARCHIVE + 25-REPO SMOKE TEST: PASS');
 }
