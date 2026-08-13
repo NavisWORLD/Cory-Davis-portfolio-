@@ -1,0 +1,57 @@
+# SHA-256 manifest: August 12, 2026 source-document archive
+
+# Hashes below identify the exact source Markdown bytes extracted from today’s generated project bundles.
+# They prove byte identity/integrity, not scientific validity or authorship by themselves.
+
+a99ceda0bde45404e485493389f654946cad9c030a07e2e65d4aea6dc7902e37  archive/2026-08-12/source/cosmos-cst/AZURE_BUILD_GUIDE.md  # 3528 bytes
+a1fc788e2ae6dcfd2d8e633a1cace41ec22d3d3b2c687a185b567af038742690  archive/2026-08-12/source/cosmos-cst/COSMOS_CST_UNIVERSE_MANUAL.md  # 54716 bytes
+7a854bd33c1b808da7eb74762c766f11b5d1c8e6bcf03ac59593d878ed137453  archive/2026-08-12/source/cosmos-cst/EXPERIMENTAL_VACUUM_CORRIDOR_ADDENDUM.md  # 2671 bytes
+5a61127732d1fc416bccb0c324f8d1dee3a729ff2121306d2c1a20700ddab7be  archive/2026-08-12/source/cosmos-cst/GROWTH_CYCLES.md  # 1681 bytes
+2c40e7c64fdc4aee1005c61fb3a959c3f294d3fc22fbf1e69aefdfc6c4a3f201  archive/2026-08-12/source/cosmos-cst/HEART_BRIDGE_GUIDE.md  # 2352 bytes
+840e95cfb48ebefcad0a6df86bfd76de9a3d9b76d8604cc4c69028dfe9210fd3  archive/2026-08-12/source/cosmos-cst/MEMORY_ARCHITECTURE.md  # 2931 bytes
+8952590a8bc173b05230ed948c79ddfca95a7a5499654fda58e31d8740673106  archive/2026-08-12/source/cosmos-cst/OPEN_DISCLOSURE_MANUAL.md  # 8142 bytes
+38a073c702bbdd660a95c58423003cc8b885751b31de7599116107f21148c36e  archive/2026-08-12/source/cosmos-cst/PUBLIC_RESEARCH_LINKS.md  # 2145 bytes
+d54905a5c77f4bf4db4e2e3f0cc55fbe6f7332c713ee5caea1c692d1f5cc0ba7  archive/2026-08-12/source/cosmos-cst/TEACHERS_GUIDE.md  # 3989 bytes
+686b16d3fcd10a4f219f9e634ab050c691b09c8ed751cc6b2eb60fe1115731c1  archive/2026-08-12/source/cosmos-cst/book/00-front-matter.md  # 5038 bytes
+931d63166a3244237ffca813844de71da678846c8e236f3426c4a0c71605d580  archive/2026-08-12/source/cosmos-cst/book/01-part-i-foundations-and-research-lineage.md  # 4293 bytes
+9f5b9d092e2fd7f59d71dc0c800f6bc4d2e319c2a05dfafa66982db90bd9f2ce  archive/2026-08-12/source/cosmos-cst/book/02-part-ii-cosmos-system-architecture.md  # 13485 bytes
+fa62e520366537116c4ef2cac11b6741fb77b2ab6b98c11452b6f76f0a1f986b  archive/2026-08-12/source/cosmos-cst/book/03-part-iii-loops-and-pipelines.md  # 4840 bytes
+92627735ebad3d0a004ad822a7a7b0dbb9c55af85090db97e22c006a8cb4fb2c  archive/2026-08-12/source/cosmos-cst/book/04-part-iv-validation-and-reproducibility.md  # 7328 bytes
+8bdff6317bdced2ae878739ad83636dd9f4087199b07a9837491f1c8dcbe1a14  archive/2026-08-12/source/cosmos-cst/book/05-part-v-build-and-operate.md  # 3887 bytes
+b00eee472c712fb6c74257c5d0e32e2aa6d7d3f02be3305a405fff4cef7f2dc2  archive/2026-08-12/source/cosmos-cst/book/06-part-vi-teacher's-study-guide.md  # 7528 bytes
+e02fbd6a07993c509cc181cbeb6fffe988a8ff50c53f3bab4e457dc719c43360  archive/2026-08-12/source/cosmos-cst/book/07-appendix-a-glossary.md  # 2249 bytes
+ba9be02f9123efcaae32bb2ba8844d4b3789c1ca27e43a6ca0418c9c1a235d4b  archive/2026-08-12/source/cosmos-cst/book/08-appendix-b-public-research-links.md  # 1078 bytes
+ba82bdd7c7d6665a8249e14781dfe84f02eec9a90a0d2eaad9b954b1c9016249  archive/2026-08-12/source/cosmos-cst/book/09-appendix-c-validation-metric-links.md  # 1755 bytes
+2b1c4768381890eda361d6c0a01c79b83808b5f0802accbba8d6f400c9ceb59d  archive/2026-08-12/source/cosmos-cst/book/10-appendix-d-canonical-claim-map.md  # 1799 bytes
+2c4667385339f64ab3332e7fad7629774cccf5ecd5d95498ff2a6f2893b14c05  archive/2026-08-12/source/cosmos-cst/book/11-appendix-e-a-reader's-reproduction-checklist.md  # 764 bytes
+15da3f26009fd9eb30a6d71fa124fb8023a1b412fb9c1d571a756f55faf6352a  archive/2026-08-12/source/cosmos-cst/book/12-closing-note.md  # 663 bytes
+1c9d3bdc49b49cfded52b61107ad66407cbc4e5cd8019dab9eb79a7f3df50a13  archive/2026-08-12/source/cosmos-cst/book/README.md  # 168 bytes
+913aa2f2297077ca4117400a656576c79dd20a9f50c8899aefd8de75b3180aec  archive/2026-08-12/source/heartlight/ARCHITECTURE.md  # 2766 bytes
+c9c7c4975526a8b15cdabc54f08f8195b7eab0f03235b55459b551546bc66767  archive/2026-08-12/source/heartlight/BEHAVIORAL_AIDE_QUICK_GUIDE.md  # 625 bytes
+c2a669b8da9ca0d0ed44d3498eb624076f336d1b19a9032433ca0272df2c46f4  archive/2026-08-12/source/heartlight/CLINICIAN_ADJUNCT_GUIDE.md  # 2511 bytes
+1e8537bab29a0de7c05fa6ec97e53be2c59e06e4be0c05948a60c0f5f559d5f1  archive/2026-08-12/source/heartlight/DATA_DICTIONARY.md  # 960 bytes
+67cb1808787b21c82e8f62f0e72923553b9b6702d19cdc91e58359f548874866  archive/2026-08-12/source/heartlight/NATIVE_PACKAGING.md  # 1079 bytes
+f9f68422dfe74e6738879444cc6bb9a21532a18c948c8ca58b9aebabdaa2fb33  archive/2026-08-12/source/heartlight/PRIVACY_AND_SAFETY.md  # 2537 bytes
+d4e0b0d447eee7db25184b372c667184661efeaff90f305c91634e8e1d67d57e  archive/2026-08-12/source/heartlight/RESEARCH_AND_VALIDATION.md  # 2153 bytes
+f926336535a97434c0974c593b8c62dcb72efe640976a6b2f4e0da068ec4e8b9  archive/2026-08-12/source/heartlight/STIMMING_GUIDE.md  # 2620 bytes
+9a44a5f6516a0e64a11878f154940182e71a213d5413536aef91ef2450e76832  archive/2026-08-12/source/heartlight/STUDENT_GUIDE.md  # 775 bytes
+8b96a853987aa4c76fc954e0a6a506c7335b867ef3945751d35dd1139fdaa66e  archive/2026-08-12/source/heartlight/STUDY_ARC.md  # 2885 bytes
+25cc49db613f4061205d655e7bad8374f7dd3446bf177f754b5ab419ef960844  archive/2026-08-12/source/heartlight/TEACHER_MANUAL.md  # 5207 bytes
+046fc4e15320576aad1439c95b407a1031e8e3504d9c7ae2fca07330ca69df87  archive/2026-08-12/source/heartlight/THERAPY_USAGE_GUIDE.md  # 2237 bytes
+57155b1b8b7de14f0f164a1e5c90b1cb6ae6b7b2a1aeb8845abc3ac91b63d611  archive/2026-08-12/source/music-suite/GOVERNANCE.md  # 367 bytes
+ee9f801702f57e20e26186697e1d9bfcb58d59474fe4bc2ad66166243206b974  archive/2026-08-12/source/music-suite/OPEN_SOURCE_AGREEMENT.md  # 1071 bytes
+75dcae75974bc882f91dc47849e7e244ce51ff2095fc70121e89172465a95d0b  archive/2026-08-12/source/music-suite/PRIVACY.md  # 842 bytes
+268adfb3c24f3b0797daf90a0c237151cc669d9af4266673f60c60059fbcf50d  archive/2026-08-12/source/music-suite/SECURITY.md  # 437 bytes
+957b69230f14406309f3a5d760e9583dcda774edadad2d5ca5ee12cffaa76b35  archive/2026-08-12/source/music-suite/SOURCE_PACKAGING.md  # 620 bytes
+f746ee14a64050fcdd639a5dabf9bdf845644a6ed147a0b471a69269c7e235aa  archive/2026-08-12/source/music-suite/docs/API_AND_PYTHON.md  # 528 bytes
+bbe0dda43459c54008c52fe4da134e313b169feaae5687d948c903a6f62a1bf1  archive/2026-08-12/source/music-suite/docs/ARCHITECTURE.md  # 1364 bytes
+716f8d4bdf2276456afaf26f699873b5aa6418f26760c81e2730f544859713b9  archive/2026-08-12/source/music-suite/docs/MOBILE_INSTALL.md  # 1297 bytes
+a5311cbe3db93d6921af01750105ba4a7c8d843de6caa56ea0cbf903e4955e98  archive/2026-08-12/source/music-suite/docs/RESEARCH_LINKS.md  # 904 bytes
+d1299f6de3daf3fad26f39bfcaea948eb595ffad32fc9ae2c7b706e1ea675f51  archive/2026-08-12/source/music-suite/docs/STUDENT_GUIDE.md  # 2280 bytes
+169751384476f5e92c5dbaf8eb87a0ea1b7769cfb54a249dc61fd6fb3d461f2e  archive/2026-08-12/source/music-suite/docs/TEACHER_GUIDE.md  # 2712 bytes
+284404f9f18e0d7cc5042057fa849678d272d37c27bea5336b0bc78a40789d8a  archive/2026-08-12/source/alien-conductor/ARCHITECTURE.md  # 1051 bytes
+cb8f6d0c26c499acbe415cc2a1c307cb4706d18a0416a2e703e87782ef7a65bd  archive/2026-08-12/source/alien-conductor/CONTRIBUTING.md  # 726 bytes
+6366fb386955b0ad06446ff26219ca0cbe02a372d4f39b5f2cf5a25e94884a05  archive/2026-08-12/source/alien-conductor/OPEN_SOURCE_LICENSE_NOTE.md  # 515 bytes
+9d023b2a2e2c5be674f5013d4e955fe8dbe445d9ee1898d7b197ca30047faaef  archive/2026-08-12/source/alien-conductor/README.md  # 6321 bytes
+6cbc8f6acd4824c57ea641da32706694233f9957fc35f7c05f864e74f2905b8a  archive/2026-08-12/source/universe-engine/ENGINE_MAP.md  # 6533 bytes
+94face5113e27ae16768eb7efe75e12cdbdaf43f04dec12792e1ee22b0f8b753  archive/2026-08-12/source/universe-engine/README.md  # 6844 bytes
