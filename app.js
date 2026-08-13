@@ -4,6 +4,23 @@
   const savedTheme = localStorage.getItem(themeKey);
   if (savedTheme === 'light' || savedTheme === 'dark') root.dataset.theme = savedTheme;
 
+  // Load the Portfolio OS layer on pages that opt into it. Index already links
+  // these assets directly; Works/Universe use this loader to avoid duplicating
+  // the base application runtime.
+  const osPage = ['home', 'works', 'universe'].includes(document.body?.dataset?.page || '');
+  if (osPage && !document.querySelector('link[href="os.css"]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'os.css';
+    document.head.appendChild(link);
+  }
+  if (osPage && !document.querySelector('script[src="os.js"]')) {
+    const script = document.createElement('script');
+    script.src = 'os.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   const setTheme = (theme) => {
     root.dataset.theme = theme;
     localStorage.setItem(themeKey, theme);
@@ -20,13 +37,18 @@
   });
 
   const nav = document.querySelector('.nav');
-  if (nav && !nav.querySelector('a[href="library.html"]')) {
-    const libraryLink = document.createElement('a');
-    libraryLink.href = 'library.html';
-    libraryLink.textContent = 'Library';
-    const resumeLink = nav.querySelector('a[href="resume.html"]');
-    nav.insertBefore(libraryLink, resumeLink || nav.querySelector('.hire-link') || null);
-  }
+  const insertNavLink = (href, label, beforeHref = 'resume.html') => {
+    if (!nav || nav.querySelector(`a[href="${href}"]`)) return;
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = label;
+    const before = nav.querySelector(`a[href="${beforeHref}"]`) || nav.querySelector('.hire-link') || null;
+    nav.insertBefore(link, before);
+  };
+  insertNavLink('library.html', 'Library');
+  insertNavLink('universe.html', 'Repo Universe', 'library.html');
+  insertNavLink('works.html', 'Works', 'universe.html');
+
   if (nav && !nav.querySelector('[data-menu-toggle]')) {
     const menuButton = document.createElement('button');
     menuButton.type = 'button';
@@ -171,17 +193,20 @@
 
   const palette = document.querySelector('[data-command-palette]');
   const paletteInput = document.querySelector('[data-command-input]');
-  if (palette && !palette.querySelector('a[href="library.html"]')) {
-    const results = palette.querySelector('.command-results');
-    if (results) {
-      const item = document.createElement('a');
-      item.className = 'command-item';
-      item.dataset.commandItem = '';
-      item.href = 'library.html';
-      item.innerHTML = '<span>Open-source engineering library</span><span class="command-key">Library</span>';
-      results.insertBefore(item, results.children[2] || null);
-    }
-  }
+  const addCommand = (href, label, key) => {
+    const results = palette?.querySelector('.command-results');
+    if (!results || results.querySelector(`a[href="${href}"]`)) return;
+    const item = document.createElement('a');
+    item.className = 'command-item';
+    item.dataset.commandItem = '';
+    item.href = href;
+    item.innerHTML = `<span>${label}</span><span class="command-key">${key}</span>`;
+    results.appendChild(item);
+  };
+  addCommand('works.html', 'Books, worlds, visual systems, tools', 'WORKS');
+  addCommand('universe.html', 'Repository universe', 'REPOS');
+  addCommand('library.html', 'Open-source engineering library', 'LIBRARY');
+
   const commandItems = [...document.querySelectorAll('[data-command-item]')];
 
   const openPalette = () => {
