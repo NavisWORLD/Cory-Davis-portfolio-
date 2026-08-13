@@ -4,7 +4,7 @@
 >
 > **Rule:** public repositories are linked here. Private repositories are intentionally omitted.
 
-As of the 2026-08-12 portfolio consolidation, the NavisWORLD account exposes **24 public repositories**. This file is the machine-readable / recruiter-readable counterpart to the visual `universe.html` map.
+As of the 2026-08-13 final portfolio audit, the NavisWORLD account exposes **25 public repositories**. This file is the machine-readable / recruiter-readable counterpart to the visual `universe.html` map.
 
 A repository link means **inspect the artifact**, not “accept every interpretation attached to it.” Forks/upstream ecosystems are labeled separately from Cory-authored provenance.
 
@@ -18,6 +18,7 @@ A repository link means **inspect the artifact**, not “accept every interpreta
 | [-reality-bridge-alien-conductor-local-ai-band](https://github.com/NavisWORLD/-reality-bridge-alien-conductor-local-ai-band) | Adaptive music, local AI band architecture, browser instrument ancestry, and engineering book. |
 | [Reality-bridge-universal-probe-engine-sim-](https://github.com/NavisWORLD/Reality-bridge-universal-probe-engine-sim-) | Reality Bridge / universe simulation and probe-engine system. |
 | [COSMOS-HEARTLIGHT](https://github.com/NavisWORLD/COSMOS-HEARTLIGHT) | Local-first inclusive classroom/support technology: PWA, C++17, Rust/FFI, educator/family/student/clinician/developer documentation, privacy boundaries, and CI. |
+| [Death-on-a-sub-](https://github.com/NavisWORLD/Death-on-a-sub-) | **HEARTLIGHT // The Lantern Archive** — local-first memorial-continuity toolkit for preserving family records, stories, values, teaching, media, provenance, and optional heartbeat-derived rhythm signatures; explicitly not a resurrection or exact-identity claim. |
 | [Cosmic-quantum-video-picture-generator-](https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-) | Local-first image/video/storybook engine with native rendering, continuity state, deterministic receipts, branch search, resumable long-form media, HTTP/JSONL integration, Rust/C++, PWA, and optional IBM provenance. |
 | [Python-cst-libraries-](https://github.com/NavisWORLD/Python-cst-libraries-) | Reusable CST-oriented Python/C++/Rust library work and integration documentation. |
 
@@ -59,6 +60,7 @@ A repository link means **inspect the artifact**, not “accept every interpreta
 ## Accessibility and human-centered support
 
 - [COSMOS-HEARTLIGHT](https://github.com/NavisWORLD/COSMOS-HEARTLIGHT) — inclusive support platform with local-first interaction, cross-platform reference cores, teacher/family/student/clinician material, and explicit no-diagnosis/no-discipline boundaries.
+- [Death-on-a-sub-](https://github.com/NavisWORLD/Death-on-a-sub-) — HEARTLIGHT // The Lantern Archive: family-controlled memorial continuity using consented records, append-only teaching, cryptographic provenance, optional heartbeat rhythm signatures, local storage, and optional cloud mirrors. The repository explicitly rejects resurrection, soul-recovery, exact-human-identity, and deceptive-impersonation claims.
 
 ## Books, manuals, and open teaching
 
@@ -69,12 +71,13 @@ A repository link means **inspect the artifact**, not “accept every interpreta
 - [Quantum-azure-ibm-bridge-attachment-](https://github.com/NavisWORLD/Quantum-azure-ibm-bridge-attachment-) — quantum bridge teacher/manual surface.
 - [Bio-integration-pipeline-](https://github.com/NavisWORLD/Bio-integration-pipeline-) — bio/sensory pipeline teaching and integration surface.
 - [COSMOS-HEARTLIGHT](https://github.com/NavisWORLD/COSMOS-HEARTLIGHT) — educator, engineering, student, family, clinician, privacy, and validation library.
+- [Death-on-a-sub-](https://github.com/NavisWORLD/Death-on-a-sub-) — family manual, teacher/facilitator guide, science notes, ethics/safety policy, architecture manual, enterprise notes, protocol/SDK documentation, and *The Lantern Book*.
 
 ## Portfolio / navigation
 
 - [Cory-Davis-portfolio-](https://github.com/NavisWORLD/Cory-Davis-portfolio-) — this living Portfolio OS, publication index, proof ledger, timeline, résumé, works map, and public-repo constellation.
 
-## Complete 24-repository public set
+## Complete 25-repository public set
 
 1. [CosmicSynapse](https://github.com/NavisWORLD/CosmicSynapse)
 2. [The-theory-of-CST](https://github.com/NavisWORLD/The-theory-of-CST)
@@ -100,6 +103,7 @@ A repository link means **inspect the artifact**, not “accept every interpreta
 22. [Cosmic-synapse-the-living-universe-sim-engine-](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-)
 23. [COSMOS-HEARTLIGHT](https://github.com/NavisWORLD/COSMOS-HEARTLIGHT)
 24. [Cosmic-quantum-video-picture-generator-](https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-)
+25. [Death-on-a-sub-](https://github.com/NavisWORLD/Death-on-a-sub-) — HEARTLIGHT // The Lantern Archive memorial-continuity toolkit
 
 ## External public research surfaces
 
