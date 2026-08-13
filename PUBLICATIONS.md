@@ -7,20 +7,80 @@
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-This is the canonical portfolio index for public books, manuals, papers, engineering guides, teaching material, and publication-grade technical documentation associated with Cory Shane Davis / NavisWORLD.
+This is the canonical portfolio index for public books, manuals, papers, engineering guides, teaching material, study guides, teacher/aide/clinician material, source hashes, and publication-grade technical documentation associated with Cory Shane Davis / NavisWORLD.
 
 ## How proof is represented
 
-This archive deliberately separates four different things:
+This archive deliberately separates five different things:
 
 1. **Artifact identity** — SHA-256 establishes whether two files contain the exact same bytes.
 2. **Version history** — Git commits establish a timestamped public history of repository states.
-3. **Deposited publication record** — the Zenodo DOI establishes a citable deposited research record.
-4. **Scientific evidence** — benchmarks, controls, replications, measurements, and nulls determine whether a technical claim is supported.
+3. **Public source-file record** — Drive file IDs/timestamps provide downloadable source-file anchors.
+4. **Deposited publication record** — the Zenodo DOI establishes a citable deposited research record.
+5. **Scientific evidence** — benchmarks, controls, replications, measurements, and nulls determine whether a technical claim is supported.
 
 A hash is not a scientific result. A commit is not proof of authorship for every byte. A DOI is not peer-review by itself. This portfolio keeps those distinctions visible.
 
-See [`ARTIFACTS.sha256`](ARTIFACTS.sha256), [`EVIDENCE.md`](EVIDENCE.md), and [`PROVENANCE.md`](PROVENANCE.md).
+See [`ARTIFACTS.sha256`](ARTIFACTS.sha256), [`WORD_LIBRARY_2026-08-12.sha256`](WORD_LIBRARY_2026-08-12.sha256), [`PROOF_LEDGER.md`](PROOF_LEDGER.md), [`EVIDENCE.md`](EVIDENCE.md), and [`PROVENANCE.md`](PROVENANCE.md).
+
+---
+
+## 00 // August 12, 2026 — Complete Public Documentation Corpus
+
+### 00–24 Word library
+
+**Status:** PUBLIC SOURCE DOCUMENT CORPUS / HASH ANCHORED  
+**Count:** 25 exact DOCX binaries  
+**Catalog:** [`WORD_LIBRARY_2026-08-12.md`](WORD_LIBRARY_2026-08-12.md)  
+**SHA-256 manifest:** [`WORD_LIBRARY_2026-08-12.sha256`](WORD_LIBRARY_2026-08-12.sha256)  
+**Public originals:** https://drive.google.com/drive/folders/16gJlHxHqDWAG4xsUKBKIxzY69v92Jv4S
+
+The 00–24 set is the recruiter/reviewer/teacher-facing documentation spine created during the August 12 disclosure sprint:
+
+0. START HERE — Public Portfolio Index
+1. Cory Davis Résumé
+2. Cory Davis Portfolio Master
+3. COSMOS System Architecture Manual
+4. COSMOS Teacher and Reviewer Guide
+5. COSMOS Installation Build and Recovery Manual
+6. COSMOS Claims Evidence and Verification Matrix
+7. CST Technical Primer and Falsifiability Guide
+8. COSMOS Engineering Loop Atlas
+9. COSMOS Synaptic Persistence and Forever Memory
+10. COSMOS CNS Bridge and Seven-Organ Controller
+11. COSMOS Quantum Bridge Heart and Azure Heartbeat
+12. COSMOS Sensory and Bio Integration
+13. COSMOS Music Conductor and Instrument Suite
+14. COSMOS Universe Simulation Engine
+15. COSMOS Validation Metrics and Failure Archive
+16. COSMOS Local Runtime and CLI Operations
+17. COSMOS HER HANDS and Safe Autonomy
+18. COSMOS Python Libraries and Computational Vocabulary
+19. Reality Bridge Evidence and Prediction Research Instrument
+20. Open Source COSMOS CST Engineering Course
+21. COSMOS Open Source Code and Reference Implementation Index
+22. COSMOS Teacher Lab Workbook
+23. COSMOS Open Source Release and Publication Checklist
+24. COSMOS Career OS Licensing Boundary
+
+Every source DOCX was fetched as exact bytes from the public Drive library and SHA-256 fingerprinted. The catalog records each title, byte size, digest, and direct public source link.
+
+### Dated teacher / study / manual source snapshot
+
+**Status:** SOURCE-BUNDLE SNAPSHOT / HASH ANCHORED  
+**Count:** 52 Markdown source documents  
+**Archive map:** [`archive/2026-08-12/README.md`](archive/2026-08-12/README.md)  
+**SHA-256 manifest:** [`archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256`](archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256)
+
+The generated project bundles contributed a dated source snapshot spanning:
+
+- **COSMOS / CST:** open-disclosure manual, teacher guide, teacher study guide, architecture/book chapters, memory architecture, Azure build guide, Heart Bridge guide, growth cycles, experimental addendum, public research links, validation/reproducibility and reproduction material;
+- **COSMOS HEARTLIGHT:** teacher manual, student guide, study arc, behavioral-aide guide, stimming guide, therapy usage guide, clinician adjunct, privacy/safety, research/validation, architecture/data/device material;
+- **COSMOS Music Open Suite:** teacher/student guides, architecture, Python/API, mobile install, research links, governance, privacy, security, open-source agreement and source packaging;
+- **Reality Bridge / Alien Conductor:** architecture, README/publication documentation, contribution and open-source/license material;
+- **Universe Engine:** generated engine map and rebuild README snapshot.
+
+The live public project repositories are canonical readable/evolving editions and may contain newer additions after the dated bundle. The SHA-256 manifest freezes the exact source snapshot used during this portfolio pass.
 
 ---
 
@@ -37,7 +97,7 @@ See [`ARTIFACTS.sha256`](ARTIFACTS.sha256), [`EVIDENCE.md`](EVIDENCE.md), and [`
 
 ### Scope
 
-Architecture, loops, memory, state, sensory systems, quantum provenance, validation, reproducibility, runtime operations, the 12D/42D/54D state ladder, CNS, heartbeat/reconciliation, autonomous lanes, failure analysis, rebuild order, and a twelve-week teacher study guide.
+Architecture, loops, memory, state, sensory systems, quantum provenance, validation, reproducibility, runtime operations, the 12D/42D/54D state ladder, CNS, heartbeat/reconciliation, autonomous lanes, failure analysis, rebuild order, and a teacher study path.
 
 ### Why it matters
 
@@ -54,6 +114,11 @@ The manual does not require the reader to accept the early theory language. Its 
 ### Reader edition
 
 See [`publications/COSMOS_CST_UNIVERSE_MANUAL_READER.md`](publications/COSMOS_CST_UNIVERSE_MANUAL_READER.md).
+
+### Live teaching source
+
+- https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual./tree/main/docs
+- https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual./tree/main/docs/book
 
 ---
 
@@ -77,6 +142,11 @@ The working browser ancestry is described as local DSP + music-theory logic + co
 ### Reader edition
 
 See [`publications/ALIEN_CONDUCTOR_ENGINEERING_BOOK_READER.md`](publications/ALIEN_CONDUCTOR_ENGINEERING_BOOK_READER.md).
+
+### Live publication source
+
+- https://github.com/NavisWORLD/-reality-bridge-alien-conductor-local-ai-band/tree/main/docs
+- https://github.com/NavisWORLD/-reality-bridge-alien-conductor-local-ai-band/tree/main/docs/book
 
 ---
 
@@ -126,9 +196,10 @@ See [`publications/HEHS_V1_TO_V2_CORRECTION_LEDGER.md`](publications/HEHS_V1_TO_
 ## 05 // COSMOS HEARTLIGHT
 
 **Status:** IMPLEMENTED PUBLIC OPEN-SOURCE EDUCATION / ACCESSIBILITY TOOLKIT  
-**Repository:** https://github.com/NavisWORLD/COSMOS-HEARTLIGHT
+**Repository:** https://github.com/NavisWORLD/COSMOS-HEARTLIGHT  
+**Documentation:** https://github.com/NavisWORLD/COSMOS-HEARTLIGHT/tree/main/docs
 
-HEARTLIGHT turns the COSMOS/CST systems lineage into a local-first support platform for inclusive classrooms. The public repository contains a standalone HTML application, installable PWA, C++17 core/C ABI, Rust core/FFI, platform integration guides, teacher/family/student/clinician material, educator and engineering books, a study workbook, privacy/safety documentation, research/validation guidance, and CI.
+HEARTLIGHT turns the COSMOS/CST systems lineage into a local-first support platform for inclusive classrooms. The public repository contains a standalone HTML application, installable PWA, C++17 core/C ABI, Rust core/FFI, platform integration guides, teacher/family/student/clinician/aide material, study material, privacy/safety documentation, research/validation guidance, and CI.
 
 Hard boundary: HEARTLIGHT is not presented as a medical device, diagnosis engine, psychotherapy replacement, automated discipline tool, or automated IEP authority. Learner preference and human review outrank sensor/software suggestions.
 
@@ -136,7 +207,17 @@ See [`publications/HEARTLIGHT_PRODUCT_BRIEF.md`](publications/HEARTLIGHT_PRODUCT
 
 ---
 
-## 06 // COSMOS Cosmic Quantum Video & Picture Generator
+## 06 // COSMOS Music Open Suite
+
+**Status:** PUBLIC TEACHING / CREATIVE-COMPUTING TOOLKIT  
+**Repository:** https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine  
+**Teaching docs:** https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine/tree/main/COSMOS_MUSIC_SUITE/docs
+
+The public suite includes teacher and student guides, architecture, API/Python integration, mobile installation, research links, and supporting governance/privacy/security/source-packaging material alongside the adaptive audio engine lineage.
+
+---
+
+## 07 // COSMOS Cosmic Quantum Video & Picture Generator
 
 **Status:** RESEARCH + ENGINEERING RELEASE  
 **Repository:** https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-
@@ -149,7 +230,7 @@ See [`publications/COSMOS_MEDIA_ENGINE_BRIEF.md`](publications/COSMOS_MEDIA_ENGI
 
 ---
 
-## 07 // Subsystem manuals and open teaching library
+## 08 // Subsystem manuals and open teaching library
 
 The broader public documentation is intentionally decomposed so engineers can adopt or review one mechanism without importing the entire project mythology or runtime.
 
@@ -167,9 +248,9 @@ The broader public documentation is intentionally decomposed so engineers can ad
 
 ---
 
-## 08 // Archival material that is not promoted as technical proof
+## 09 // Archival material that is not promoted as technical proof
 
-The working Library contains personal and/or interpretive documents that are intentionally **not** placed into the primary engineering evidence archive merely because they exist. Personal travel records, astrology reports, private records, raw family material, biometric/media data, and subjective third-party/AI analyses do not become engineering proof by being uploaded.
+The working Library contains personal and/or interpretive documents that are intentionally **not promoted as technical proof** merely because they exist. Personal travel records, astrology reports, private records, raw family material, biometric/media data, and subjective third-party/AI analyses do not become engineering proof by being uploaded.
 
 If an archival analysis is ever published, it should be clearly labeled **ARCHIVAL / INTERPRETIVE / NOT INDEPENDENT VERIFICATION** and separately consented for public release.
 
@@ -177,22 +258,24 @@ If an archival analysis is ever published, it should be clearly labeled **ARCHIV
 
 ## Verification
 
-On macOS/Linux:
+For the complete 00–24 Word corpus:
 
 ```bash
-sha256sum FILE
-# or
-shasum -a 256 FILE
+sha256sum "04 - COSMOS Teacher and Reviewer Guide.docx"
 ```
 
-On PowerShell:
+Compare to [`WORD_LIBRARY_2026-08-12.sha256`](WORD_LIBRARY_2026-08-12.sha256).
+
+For the dated Markdown source-bundle snapshot, compare to [`archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256`](archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256).
+
+For the flagship publication binaries, compare to [`ARTIFACTS.sha256`](ARTIFACTS.sha256).
+
+PowerShell alternative:
 
 ```powershell
 Get-FileHash .\FILE -Algorithm SHA256
 ```
 
-Compare the resulting digest to [`ARTIFACTS.sha256`](ARTIFACTS.sha256).
-
 ---
 
-**BUILD STRANGE // HASH THE ARTIFACT // MEASURE THE CLAIM // PRESERVE THE NULL**
+**BUILD STRANGE // HASH THE ARTIFACT // MEASURE THE CLAIM // PRESERVE THE NULL // TEACH THE NEXT BUILDER**
