@@ -106,6 +106,105 @@
     'dyn12-from-portable'
   );
 
+  // Final public-repository sync. The underlying HTML is intentionally preserved;
+  // this additive layer keeps the visible Portfolio OS aligned with the live 25-repo
+  // public constellation and injects the newest project without deleting older DOM.
+  const syncFinalRepositoryState = () => {
+    const page = document.body?.dataset?.page || '';
+    const lanternRepo = 'https://github.com/NavisWORLD/Death-on-a-sub-';
+    const replaceText = (el, from, to) => {
+      if (el && el.textContent.includes(from)) el.textContent = el.textContent.replace(from, to);
+    };
+
+    if (page === 'home') {
+      replaceText(document.querySelector('.os-home .hero-actions a[href="universe.html"]'), '24 PUBLIC REPOS', '25 PUBLIC REPOS');
+      [...document.querySelectorAll('.signal-strip .signal strong')]
+        .forEach((el) => replaceText(el, '24 PUBLIC', '25 PUBLIC'));
+      replaceText(document.querySelector('.portal[href="universe.html"] h3'), '24-Repo Universe', '25-Repo Universe');
+
+      const flagshipSection = [...document.querySelectorAll('main section')]
+        .find((section) => section.querySelector('.section-head h2')?.textContent.includes('Eight doors'));
+      if (flagshipSection) {
+        replaceText(flagshipSection.querySelector('.section-head h2'), 'Eight doors', 'Nine doors');
+        const cards = flagshipSection.querySelector('.cards');
+        if (cards && !cards.querySelector('[data-final-repo="lantern"]')) {
+          const card = document.createElement('article');
+          card.className = 'card reveal';
+          card.dataset.finalRepo = 'lantern';
+          card.innerHTML = `<div class="card-kicker"><span class="badge implemented">Local-first memorial continuity</span><span>Family / provenance</span></div><h3>HEARTLIGHT // The Lantern Archive</h3><p>A family-controlled memorial-continuity toolkit for consented stories, media, values, family teaching, provenance, and optional heartbeat-derived rhythm signatures. Explicitly not resurrection, soul recovery, exact identity recreation, or deceptive impersonation.</p><div class="card-links"><a class="inline-link" href="${lanternRepo}" target="_blank" rel="noreferrer">Repository ↗</a><a class="inline-link" href="publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md">Product brief →</a></div>`;
+          cards.appendChild(card);
+        }
+      }
+    }
+
+    if (page === 'projects') {
+      const list = document.querySelector('.project-list');
+      if (list && !list.querySelector('[data-final-repo="lantern"]')) {
+        const row = document.createElement('article');
+        row.className = 'project-row reveal';
+        row.dataset.project = 'ai creative evidence research';
+        row.dataset.finalRepo = 'lantern';
+        row.innerHTML = `<div class="project-meta"><span class="badge implemented">Implemented / experimental</span><br><br>Memorial continuity · Family governance</div><div><h2>HEARTLIGHT // The Lantern Archive</h2><p>A local-first memorial-continuity toolkit with family evidence import, SHA-256 provenance, append-only family teaching, grounded memorial-profile construction, heartbeat-derived rhythm signatures, HIP event contracts, optional Azure/IBM storage mirrors, cross-language SDK surfaces, deployment material, tests/CI, and explicit no-resurrection/no-impersonation rules.</p><div class="tag-row"><span class="tag">Python</span><span class="tag">Heartbeat DSP</span><span class="tag">Azure</span><span class="tag">IBM COS</span><span class="tag">Provenance</span><span class="tag">Ethics</span></div></div><div class="project-actions"><a class="btn" href="${lanternRepo}" target="_blank" rel="noreferrer">Repository ↗</a><a class="btn btn-ghost" href="publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md">Product brief →</a></div>`;
+        const ctaSection = list.querySelector(':scope > .cta');
+        if (ctaSection) list.insertBefore(row, ctaSection); else list.appendChild(row);
+      }
+    }
+
+    if (page === 'works') {
+      const booksSection = [...document.querySelectorAll('main section')]
+        .find((section) => section.querySelector('.eyebrow')?.textContent.includes('Books & manuals'));
+      const cards = booksSection?.querySelector('.cards');
+      if (cards && !cards.querySelector('[data-final-repo="lantern"]')) {
+        const card = document.createElement('article');
+        card.className = 'card reveal';
+        card.dataset.finalRepo = 'lantern';
+        card.innerHTML = `<div class="card-kicker"><span class="badge implemented">Family / ethics / engineering</span><span>Lantern Archive</span></div><h3>HEARTLIGHT // The Lantern Archive manuals</h3><p>A product-shaped memorial-continuity system with family, teacher/facilitator, science, ethics/safety, architecture, enterprise, protocol, SDK, provenance, and local-first operation documentation.</p><div class="card-links"><a class="inline-link" href="publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md">Portfolio brief →</a><a class="inline-link" href="${lanternRepo}" target="_blank" rel="noreferrer">Repository ↗</a></div>`;
+        cards.appendChild(card);
+      }
+    }
+
+    if (page === 'universe') {
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.content = meta.content.replace('24 public', '25 public');
+      replaceText(document.querySelector('.page-hero .boot-label'), '24 PUBLIC NODES', '25 PUBLIC NODES');
+      replaceText(document.querySelector('.page-hero .hero-actions a[href="REPOSITORY_UNIVERSE.md"]'), '24-repo', '25-repo');
+      replaceText(document.querySelector('.constellation-core span'), '24 PUBLIC REPOS', '25 PUBLIC REPOS');
+
+      const flagship = [...document.querySelectorAll('main section')]
+        .find((section) => section.querySelector('.section-head h2')?.textContent.includes('Eight fast doors'));
+      if (flagship) {
+        replaceText(flagship.querySelector('.section-head h2'), 'Eight fast doors', 'Nine fast doors');
+        const p = flagship.querySelector('.section-head > p');
+        if (p) p.textContent = 'The visual orbit remains compact for layout stability; HEARTLIGHT, COSMOS Media, and the Lantern Archive join the flagship grid and ASCII constellation.';
+        const grid = flagship.querySelector('.repo-grid');
+        if (grid && !grid.querySelector('[data-final-repo="lantern"]')) {
+          const tile = document.createElement('a');
+          tile.className = 'repo-tile reveal';
+          tile.dataset.finalRepo = 'lantern';
+          tile.href = lanternRepo;
+          tile.target = '_blank';
+          tile.rel = 'noreferrer';
+          tile.innerHTML = `<span class="repo-index">09</span><h3>HEARTLIGHT // Lantern Archive</h3><p>Local-first memorial continuity: family evidence, teaching, provenance, heartbeat rhythm signatures, Azure/IBM mirrors, SDKs, and explicit no-resurrection/no-impersonation boundaries.</p><span class="repo-go">OPEN ↗</span>`;
+          grid.appendChild(tile);
+        }
+      }
+
+      const creativeSection = [...document.querySelectorAll('main section')]
+        .find((section) => section.querySelector('h2')?.textContent.includes('Creative systems become public infrastructure'));
+      const repoList = creativeSection?.querySelector('.repo-list');
+      if (repoList && !repoList.querySelector('[data-final-repo="lantern"]')) {
+        const link = document.createElement('a');
+        link.dataset.finalRepo = 'lantern';
+        link.href = lanternRepo;
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+        link.innerHTML = '<strong>Death-on-a-sub- / HEARTLIGHT // The Lantern Archive</strong><span>local memorial continuity · family teaching · heartbeat rhythm · provenance · Azure/IBM mirrors</span><b>↗</b>';
+        repoList.appendChild(link);
+      }
+    }
+  };
+  syncFinalRepositoryState();
+
   const isLibraryPage = location.pathname.endsWith('/library.html') || location.pathname.endsWith('library.html');
   if (isLibraryPage) {
     const heroActions = document.querySelector('.page-hero .hero-actions');
@@ -220,6 +319,7 @@
   addCommand('timeline.html', 'Career + research + public artifact timeline', 'TIME');
   addCommand('proof.html', 'Proof ledger, hashes, DOI, evidence', 'PROOF');
   addCommand('offerings.html', 'What Cory can build / hiring map', 'OFFER');
+  addCommand('https://github.com/NavisWORLD/Death-on-a-sub-', 'HEARTLIGHT // The Lantern Archive', 'REPO');
 
   const commandItems = [...document.querySelectorAll('[data-command-item]')];
 
@@ -287,13 +387,13 @@
     if (!document.querySelector('link[data-ascii-ui]')) {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'ascii-ui.css?v=20260812-record';
+      link.href = 'ascii-ui.css?v=20260813-final';
       link.dataset.asciiUi = 'true';
       document.head.appendChild(link);
     }
     if (!document.querySelector('script[data-ascii-ui]')) {
       const script = document.createElement('script');
-      script.src = 'ascii-ui.js?v=20260812-record';
+      script.src = 'ascii-ui.js?v=20260813-final';
       script.dataset.asciiUi = 'true';
       script.defer = true;
       document.body.appendChild(script);
