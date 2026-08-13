@@ -265,4 +265,26 @@
 
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
+
+  // Full Portfolio ASCII interface. This is intentionally loaded for EVERY page
+  // that uses app.js. The existing DOM remains untouched as the source of truth;
+  // ascii-ui.js decorates nodes in place and can be toggled off with A or the
+  // ASCII:ON control without deleting or rewriting any content.
+  const loadAsciiInterface = () => {
+    if (!document.querySelector('link[data-ascii-ui]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'ascii-ui.css?v=20260812';
+      link.dataset.asciiUi = 'true';
+      document.head.appendChild(link);
+    }
+    if (!document.querySelector('script[data-ascii-ui]')) {
+      const script = document.createElement('script');
+      script.src = 'ascii-ui.js?v=20260812';
+      script.dataset.asciiUi = 'true';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  };
+  loadAsciiInterface();
 })();
