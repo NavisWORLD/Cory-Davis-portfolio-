@@ -3,7 +3,7 @@
 ```text
 ARTIFACT → HASH
 VERSION  → GIT COMMIT
-PUBLIC RECORD → DOI / REPOSITORY TIMESTAMP
+PUBLIC RECORD → DOI / DRIVE ID / REPOSITORY TIMESTAMP
 CLAIM → TEST / CONTROL / NULL / REPLICATION
 ```
 
@@ -15,6 +15,7 @@ This ledger makes the portfolio's proof model explicit. Different evidence answe
 |---|---|---|
 | SHA-256 | Exact byte identity/integrity of a file | authorship, correctness, scientific truth |
 | Git commit history | Public version/timestamp lineage for repository content | authorship of every upstream/third-party byte |
+| Drive file ID / timestamp | Stable downloadable source-file record | scientific validity or independent verification |
 | DOI / deposited record | Stable citable publication/deposit record | peer review or truth of every claim |
 | Runtime logs / tests | A mechanism executed under the captured conditions | broad generalization |
 | Controlled benchmark | Performance on the declared model/data/seeds/metric | universal superiority |
@@ -23,7 +24,41 @@ This ledger makes the portfolio's proof model explicit. Different evidence answe
 
 ---
 
-## Hashed source artifacts
+## August 12, 2026 document corpus
+
+The public-disclosure / portfolio sprint produced a structured document library rather than only README summaries.
+
+### 00–24 Word library
+
+**25 exact DOCX binaries** are cataloged in [`WORD_LIBRARY_2026-08-12.md`](WORD_LIBRARY_2026-08-12.md) and fingerprinted in [`WORD_LIBRARY_2026-08-12.sha256`](WORD_LIBRARY_2026-08-12.sha256).
+
+The Word set covers:
+
+- public portfolio index, résumé, and portfolio master;
+- COSMOS system architecture, installation/build/recovery, evidence/verification, loop atlas, memory, CNS, quantum/Azure, sensory/bio, music, simulation, validation/failure, CLI/runtime, safe autonomy, and Python/library vocabulary;
+- CST technical primer and falsifiability guide;
+- Reality Bridge evidence/prediction research instrument;
+- open-source COSMOS/CST engineering course;
+- open-source code/reference implementation index;
+- teacher/reviewer guide and teacher lab workbook;
+- release/publication checklist and licensing boundary.
+
+Public source folder: https://drive.google.com/drive/folders/16gJlHxHqDWAG4xsUKBKIxzY69v92Jv4S
+
+A SHA-256 digest can detect any later byte change to a downloaded DOCX even when the filename remains unchanged.
+
+### Dated teaching / study / manual source snapshot
+
+The generated COSMOS/CST, HEARTLIGHT, Music Suite, Alien Conductor, and Universe bundles contributed **52 Markdown source documents** to a dated byte-level snapshot.
+
+- Archive map: [`archive/2026-08-12/README.md`](archive/2026-08-12/README.md)
+- Source-byte manifest: [`archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256`](archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256)
+
+The live public project repositories are canonical readable/evolving editions. The dated manifest freezes the exact generated bundle snapshot used during this portfolio pass.
+
+---
+
+## Hashed flagship source artifacts
 
 | Artifact | SHA-256 | Status |
 |---|---|---|
@@ -53,9 +88,12 @@ The DOI is used as a stable public research-lineage anchor. Scientific claims re
 - https://github.com/NavisWORLD/The-theory-of-CST
 - https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-ver.4.2
 - https://huggingface.co/phera-ra/QC67_cosmo
+- https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual.
 - https://github.com/NavisWORLD/-reality-bridge-alien-conductor-local-ai-band
+- https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine
 - https://github.com/NavisWORLD/COSMOS-HEARTLIGHT
 - https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-
+- https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-
 
 The complete current public graph is [`REPOSITORY_UNIVERSE.md`](REPOSITORY_UNIVERSE.md).
 
@@ -129,7 +167,7 @@ PowerShell:
 Get-FileHash .\FILE -Algorithm SHA256
 ```
 
-Then compare with `ARTIFACTS.sha256`.
+Compare a 00–24 Word document with `WORD_LIBRARY_2026-08-12.sha256`, a dated Markdown source with `archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256`, or a flagship publication binary with `ARTIFACTS.sha256`.
 
 ## Reproduce a repository version
 
