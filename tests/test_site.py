@@ -27,6 +27,7 @@ RECORDS = [
     "WORD_LIBRARY_2026-08-12.sha256",
     "archive/2026-08-12/README.md",
     "archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256",
+    "publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md",
     "CITATION.cff",
     "PROVENANCE.md",
     "EVIDENCE.md",
@@ -140,15 +141,29 @@ class PortfolioIntegrityTests(unittest.TestCase):
         self.assertIn("1Pb7ByxaOfPGL2WBg3IRrlQsQKSg6Ah1X", app)
         self.assertIn("16Neusv03kjHmInoP1d6ufNODeTD_uc6y", app)
         self.assertIn("1-u_tfZ9nxgJZ3AfcaDN1CQS9AcnIg-xf", app)
+        self.assertIn("Death-on-a-sub-", app)
+        self.assertIn("LANTERN_ARCHIVE_PRODUCT_BRIEF.md", app)
         for route in ("publications.html", "timeline.html", "proof.html", "offerings.html"):
             self.assertIn(route, app)
 
     def test_repo_universe_is_current_and_provenance_aware(self):
         universe = (ROOT / "REPOSITORY_UNIVERSE.md").read_text(encoding="utf-8")
-        self.assertIn("24 public repositories", universe)
+        self.assertIn("25 public repositories", universe)
         self.assertIn("COSMOS-HEARTLIGHT", universe)
         self.assertIn("Cosmic-quantum-video-picture-generator-", universe)
+        self.assertIn("Death-on-a-sub-", universe)
+        self.assertIn("The Lantern Archive", universe)
         self.assertIn("fork/upstream", universe)
+
+    def test_lantern_archive_keeps_memorial_claim_boundary(self):
+        brief = (ROOT / "publications/LANTERN_ARCHIVE_PRODUCT_BRIEF.md").read_text(encoding="utf-8")
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        timeline = (ROOT / "TIMELINE.md").read_text(encoding="utf-8")
+        for source in (brief, readme, timeline):
+            self.assertIn("Lantern Archive", source)
+            self.assertIn("resurrection", source.lower())
+        self.assertIn("25", readme)
+        self.assertIn("25 public repositories", timeline)
 
     def test_artifact_hash_manifest_has_primary_sources(self):
         manifest = (ROOT / "ARTIFACTS.sha256").read_text(encoding="utf-8")
