@@ -39,7 +39,7 @@ Human-support experience retained in the résumé as part of the broader work hi
 
 Independent AI Researcher & Systems Builder — Cosmic Synaptic Möbius Co. / self-directed studies and engineering.
 
-The portfolio focus expands from device/electronics operations into local AI runtimes, persistent memory, dynamic state, model evaluation, realtime audio, simulation, sensory interfaces, accessibility technology, energy-harvesting prototypes, developer tooling, and technical education.
+The portfolio focus expands from device/electronics operations into local AI runtimes, persistent memory, dynamic state, model evaluation, realtime audio, simulation, sensory interfaces, accessibility technology, memorial-continuity tooling, energy-harvesting prototypes, developer tooling, and technical education.
 
 ---
 
@@ -124,6 +124,11 @@ Inclusive classroom/accessibility support technology built as a local-first PWA 
 ### 2026-08-13 UTC — `Cosmic-quantum-video-picture-generator-`
 Local-first media engine/integration layer with native rendering, deterministic provenance receipts, stateful continuity, computational branch search, resumable long-form chunking, storybook workflows, PWA, Rust/C++ reference cores, and optional IBM Quantum entropy/provenance.
 
+### 2026-08-13 UTC — `Death-on-a-sub-` / HEARTLIGHT // The Lantern Archive
+The repository began under the working title `Death-on-a-sub-` and now presents **HEARTLIGHT // The Lantern Archive**: a local-first memorial-continuity toolkit for preserving family records, stories, media, values, family teaching, provenance, and optional heartbeat-derived rhythm signatures. The public system includes local vault/profile workflows, heartbeat-signal analysis, HIP event contracts, optional Azure Blob / IBM Cloud Object Storage adapters, deployment/reference material, cross-language SDK source trees, tests/CI, and family/teacher/science/ethics documentation.
+
+The repository explicitly rejects resurrection, soul-recovery, exact-human-identity, consciousness-survival, and deceptive-impersonation claims. A Lantern is described as a new computational memorial grounded in supplied records and family teaching.
+
 ### August 12 document corpus — 00–24 Word library
 A public 25-document DOCX set was assembled as the recruiter/reviewer/teacher-facing documentation spine. It includes:
 
@@ -153,7 +158,7 @@ The portfolio itself was rebuilt into an ASCII-first usable interface while reta
 
 ## Current public constellation
 
-As of this portfolio update, the NavisWORLD account exposes **24 public repositories**. The canonical current list is maintained in [`REPOSITORY_UNIVERSE.md`](REPOSITORY_UNIVERSE.md).
+As of the final 2026-08-13 audit, the NavisWORLD account exposes **25 public repositories**. The canonical current list is maintained in [`REPOSITORY_UNIVERSE.md`](REPOSITORY_UNIVERSE.md).
 
 Private repositories, private research logs, raw personal records, raw camera/audio/biosignal data, credentials, family records, and other non-public sources are intentionally not turned into portfolio artifacts.
 
