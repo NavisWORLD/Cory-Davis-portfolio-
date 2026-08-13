@@ -23,6 +23,10 @@ RECORDS = [
     "PROOF_LEDGER.md",
     "OFFERINGS.md",
     "ARTIFACTS.sha256",
+    "WORD_LIBRARY_2026-08-12.md",
+    "WORD_LIBRARY_2026-08-12.sha256",
+    "archive/2026-08-12/README.md",
+    "archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256",
     "CITATION.cff",
     "PROVENANCE.md",
     "EVIDENCE.md",
@@ -62,6 +66,13 @@ def local_target(ref: str):
     if not clean:
         return None
     return ROOT / clean
+
+
+def hash_lines(path: Path):
+    return [
+        line for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
 
 
 class PortfolioIntegrityTests(unittest.TestCase):
@@ -119,6 +130,8 @@ class PortfolioIntegrityTests(unittest.TestCase):
         self.assertIn("NULL", evidence)
         self.assertIn("SHA-256", proof)
         self.assertIn("DOI", proof)
+        self.assertIn("25 exact DOCX", proof)
+        self.assertIn("52 Markdown source documents", proof)
 
     def test_public_ui_exposes_runnable_reference_paths_and_record_routes(self):
         app = (ROOT / "app.js").read_text(encoding="utf-8")
@@ -148,6 +161,38 @@ class PortfolioIntegrityTests(unittest.TestCase):
         )
         for digest in expected:
             self.assertIn(digest, manifest)
+
+    def test_august_12_word_library_is_complete_and_hashed(self):
+        manifest_path = ROOT / "WORD_LIBRARY_2026-08-12.sha256"
+        catalog = (ROOT / "WORD_LIBRARY_2026-08-12.md").read_text(encoding="utf-8")
+        lines = hash_lines(manifest_path)
+        self.assertEqual(25, len(lines), "00–24 Word manifest must contain exactly 25 artifact lines")
+        self.assertIn("00 - START HERE - Cory Davis Public Portfolio Index.docx", catalog)
+        self.assertIn("24 - COSMOS Career OS Licensing Boundary.docx", catalog)
+        self.assertIn("809f72846e8343c830f5fa8f5b9e4fe6c4c0ce96bfadef1f687306b7dd6797dd", catalog)
+        self.assertIn("b3fa81006fe88e281d5e7af6102df954247a8da634c23f06d07dec5c93efc050", catalog)
+
+    def test_august_12_teaching_snapshot_is_complete(self):
+        manifest_path = ROOT / "archive/2026-08-12/DOCUMENT_ARCHIVE_2026-08-12.sha256"
+        archive_index = (ROOT / "archive/2026-08-12/README.md").read_text(encoding="utf-8")
+        lines = hash_lines(manifest_path)
+        self.assertEqual(52, len(lines), "dated teaching/manual snapshot must contain exactly 52 source-document lines")
+        for phrase in (
+            "COSMOS / CST teaching and publication family",
+            "COSMOS HEARTLIGHT educator / student / aide / clinician family",
+            "COSMOS Music Open Suite teaching and integration family",
+            "Reality Bridge / Alien Conductor publication family",
+            "Universe / simulation documentation family",
+        ):
+            self.assertIn(phrase, archive_index)
+
+    def test_publication_proof_and_timeline_pages_surface_document_corpus(self):
+        publications = (ROOT / "publications.html").read_text(encoding="utf-8")
+        proof = (ROOT / "proof.html").read_text(encoding="utf-8")
+        timeline = (ROOT / "timeline.html").read_text(encoding="utf-8")
+        for source in (publications, proof, timeline):
+            self.assertIn("WORD_LIBRARY_2026-08-12", source)
+            self.assertIn("archive/2026-08-12", source)
 
     def test_private_and_interpretive_material_not_promoted_as_engineering_proof(self):
         publications = (ROOT / "PUBLICATIONS.md").read_text(encoding="utf-8")
