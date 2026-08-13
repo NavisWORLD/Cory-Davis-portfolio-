@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If this portfolio or its portfolio-specific documentation is useful to your work, cite this repository and cite individual linked projects under their own provenance and licenses."
+title: "Cory Davis Portfolio OS"
+type: software
+authors:
+  - family-names: Davis
+    given-names: Cory Shane
+repository-code: "https://github.com/NavisWORLD/Cory-Davis-portfolio-"
+url: "https://navisworld.github.io/Cory-Davis-portfolio-/"
+license: MIT
+keywords:
+  - local AI
+  - persistent memory
+  - model evaluation
+  - dynamic state
+  - creative computing
+  - realtime audio
+  - simulation
+  - accessibility technology
+  - electronics
+  - open engineering
+references:
+  - type: generic
+    title: "12-Dimensional Cosmic Synapse Theory"
+    doi: "10.5281/zenodo.17574447"
+    url: "https://doi.org/10.5281/zenodo.17574447"
+  - type: software
+    title: "COSMOS"
+    url: "https://github.com/NavisWORLD/Cosmos"
+  - type: software
+    title: "Reality Bridge / Alien Conductor Local AI Band"
+    url: "https://github.com/NavisWORLD/-reality-bridge-alien-conductor-local-ai-band"
+  - type: software
+    title: "COSMOS HEARTLIGHT"
+    url: "https://github.com/NavisWORLD/COSMOS-HEARTLIGHT"
+  - type: software
+    title: "COSMOS Cosmic Quantum Video & Picture Generator"
+    url: "https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-"
