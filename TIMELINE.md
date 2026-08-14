@@ -1,37 +1,44 @@
 # CORY DAVIS // CAREER + RESEARCH + PUBLIC ARTIFACT TIMELINE
 
 ```text
-2012 ── electronics/service ── 2018 ── CST lineage ── 2024 ── deposit ── 2025 ── public code ── 2026 ── open engineering + teaching corpus
+technical operations ── 2013 ── CST lineage ── 2024 ── public code ── 2026 ── open engineering + teaching corpus
 ```
 
-This timeline intentionally uses **two clocks**:
+This timeline intentionally uses separate clocks:
 
+- **Career date** — a date stated in the source résumé/work-history record.
 - **Research lineage date** — a date stated in project manuals/archives. It records the project's internal history and is labeled as such.
 - **Public artifact date** — a date independently visible in GitHub, Drive, or deposit metadata. It records when a public repository, document, or deposited artifact became externally timestamped.
 
-A repository created in 2026 does not imply the underlying idea began in 2026, and a historical date written in a manual is not treated as equivalent to an independently timestamped public artifact.
+A repository created in 2026 does not imply the underlying idea began in 2026, and a historical date written in a manual is not treated as equivalent to an independently timestamped public artifact. Likewise, the portfolio does not invent an employment year when the source résumé does not provide one.
 
 ---
 
-## 2012–2022 // Technical operations foundation
+## Technical operations foundation // source-résumé chronology
 
-### 2012–2013 — Burroughs Inc. // Service Technician Level 3
-Field/service-technology work in Benton, Arkansas. Part of the practical electronics/troubleshooting foundation later carried into hardware/software prototyping.
+### Burroughs Inc. // Service Technician Level 3
+**Source résumé date:** start date `Jan. 25`; **year and end date are not listed in the source résumé.**
 
-### 2013–2018 — Cellairis // Technician → Area Sales Manager
-Device diagnostics/repair, customer-facing technical work, staff/sales operations, and leadership experience in Friendswood, Texas.
+Field/service-technology work in Benton, Arkansas. Duties recorded in the résumé include parts inventory, SLA/service requirements, call-volume/data organization, and repair/diagnosis of machines including ATMs and safes using standard operating systems, tools, and software.
+
+This replaces the earlier portfolio shorthand `2012–2013`, which was more specific than the source supports.
+
+### Mar 2013 – Aug 2018 — Cellairis // Technician → Area Sales Manager
+Device diagnostics/repair, inventory and quality control, customer-facing technical work, interviewing/hiring/training, sales performance, and leadership experience in Friendswood, Texas.
 
 ### 2018 — Research-lineage marker
 The canonical COSMOS/CST Universe Manual identifies its teaching/research lineage as **2018 → 2024 → 2026**. Treat `2018` as a project-history marker documented by the manual, not as a GitHub creation timestamp.
 
-### 2019 — A1 Cellular Repair // Manager on Duty
-Technical repair plus operating responsibility in Conway, Arkansas.
+### Jun 2019 – Dec 2019 — A1 Cellular Repair // Manager
+Inventory, manager-on-duty responsibility, opening/closing, deposits, repair services, and high-volume service/sales operations in Conway, Arkansas.
 
-### 2020–2022 — uBreakiFix // Repair Technician
-Device diagnosis and repair in Bryant, Arkansas.
+### Jan 2020 – Present in source résumé — uBreakiFix // Technician
+Component/system testing, diagnostics, troubleshooting, work-order evaluation, quality assurance, customer issue resolution, product promotion/upselling, and routine inventory work in Bryant, Arkansas.
 
-### Supplemental — IHSS // Independent In-Home Caregiver
-Human-support experience retained in the résumé as part of the broader work history.
+The source résumé also records **Home+ Leading Sales Leader for 2020** and winning the **National Remodel**.
+
+### Supplemental — IHSS worker
+The source résumé records current IHSS work and says it was added to clarify a work lapse. It does not state a start year or location, so the portfolio does not invent either.
 
 ---
 
@@ -54,8 +61,11 @@ This is used as a citable research-lineage anchor. A DOI establishes a deposited
 
 ## 2025 // Public repository lineage becomes externally timestamped
 
+### 2025-01-30 — early PHERACLEASE source archive
+Public source snapshot containing early adaptive-memory, learning, neural-adaptation, feedback, and `cosmic_brain.json` persistence mechanisms. See [`TECHNICAL_LINEAGE.md`](TECHNICAL_LINEAGE.md) for the source-linked engineering progression.
+
 ### 2025-02-26 — `CosmicSynapse`
-Earliest current NavisWORLD public repository in the present GitHub account lineage.
+Earliest current NavisWORLD public repository in the present GitHub account lineage, including CST-LM bounded memory plus save/load state behavior.
 
 ### 2025-04-12 — `The-theory-of-CST`
 Public CST theory/simulation lineage.
@@ -64,7 +74,7 @@ Public CST theory/simulation lineage.
 A-LMI / Cosmic Synapse computational lineage.
 
 ### 2025-10-28 — `cosmic-synapse-A-lmi-v.2`
-Expanded A-LMI lineage.
+Expanded A-LMI lineage including perception, cognition, action, multi-store memory, and autonomous learning-goal architecture.
 
 ### 2025-11-09 — `infinite-adaptive-audio-12d-universe-engine`
 Adaptive audiovisual / 12D universe-engine lineage.
