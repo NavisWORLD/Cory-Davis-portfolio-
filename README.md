@@ -253,15 +253,15 @@ The goal is not to protect the theory. The goal is to make the mechanism inspect
 
 # 06 // CAREER + RESEARCH + PUBLIC-ARTIFACT TIMELINE
 
-Open: **[TIMELINE.md](TIMELINE.md)** / **[timeline.html](timeline.html)**
+Open: **[TIMELINE.md](TIMELINE.md)** / **[timeline.html](timeline.html)** / **[TECHNICAL_LINEAGE.md](TECHNICAL_LINEAGE.md)**
 
 ```text
-2012 ─ electronics/service ─ 2018 ─ CST lineage ─ 2024 ─ DOI ─ 2025 ─ public Git ─ 2026 ─ reusable open systems
+technical operations ─ 2013 ─ CST lineage ─ 2024 ─ DOI ─ 2025 ─ public Git ─ 2026 ─ reusable open systems
 ```
 
 The timeline uses separate clocks:
 
-- **career history** from the résumé;
+- **career history** from the source résumé, without inventing missing employment years;
 - **research-lineage dates** recorded inside project manuals;
 - **public artifact dates** visible in GitHub/deposit metadata.
 
@@ -305,16 +305,17 @@ Private repositories and private research/person/family/sensor records are inten
 
 # 08 // CAREER SNAPSHOT
 
-The technical career predates the AI research line.
+The technical career predates the AI research line. Employment dates below follow the source résumé exactly where the source provides them.
 
 - **2023–Present** — Independent AI Researcher & Systems Builder · Cosmic Synaptic Möbius Co. / Self Studies
-- **2020–2022** — Repair Technician · uBreakiFix · Bryant, Arkansas
-- **2019** — Manager on Duty · A1 Cellular Repair · Conway, Arkansas
-- **2013–2018** — Technician / Area Sales Manager · Cellairis · Friendswood, Texas
-- **2012–2013** — Service Technician Level 3 · Burroughs Inc. · Benton, Arkansas
-- Supplemental independent in-home caregiving experience is retained in the résumé.
+- **Jan 2020–Present in source résumé** — Technician · uBreakiFix · Bryant, Arkansas
+- **2020 recognition** — Home+ Leading Sales Leader; source résumé also records winning the National Remodel
+- **Jun 2019–Dec 2019** — Manager · A1 Cellular Repair · Conway, Arkansas
+- **Mar 2013–Aug 2018** — Technician / Area Sales Manager · Cellairis · Friendswood, Texas
+- **Burroughs Inc.** — Service Technician Level 3 · Benton, Arkansas; source résumé states `Start date: Jan. 25` but does **not** state the year or end date
+- **IHSS** — source résumé records current supplemental IHSS work but does not state a start year or location
 
-Education and certification details remain in **[resume.html](resume.html)** rather than being expanded into unsupported claims here.
+Education and recognition details remain in **[resume.html](resume.html)** rather than being expanded into unsupported claims here.
 
 ---
 
