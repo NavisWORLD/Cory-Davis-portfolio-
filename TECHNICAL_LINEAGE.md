@@ -1,14 +1,14 @@
 # CORY DAVIS // VERIFIED PUBLIC TECHNICAL LINEAGE
 
-> **Purpose:** give hiring managers, engineers, and research reviewers a fast, source-linked view of how the CST/COSMOS architecture evolved from early adaptive-memory experiments into persistent state, autonomous agent loops, bounded learning systems, and retrievable memory.
+> **Purpose:** give hiring managers, engineers, and research reviewers a fast, source-linked view of how CST/COSMOS evolved from early adaptive-memory experiments into persistent state, evolving world state, autonomous agent loops, bounded learning systems, retrievable memory, and later reusable engineering surfaces.
 
-This page is intentionally about **engineering lineage**, not disputes.
+This page is intentionally about **engineering lineage, not disputes**.
 
-It answers a simple hiring question:
+It answers one hiring question:
 
-> **What technical ideas did Cory keep returning to, and when did they become inspectable public mechanisms?**
+> **What technical problems did Cory keep returning to, and when did they become inspectable source mechanisms?**
 
-The answer is visible in source history: persistent memory, adaptive internal state, feedback-driven learning, multi-store memory, perception/cognition/action loops, bounded retention, retrieval, and continuous study all appear as recurring design themes across the public lineage.
+The recurring motifs are visible in source history: persistent memory, adaptive internal state, feedback-driven learning, evolving environment state, sensory input, multi-store memory, perception/cognition/action loops, bounded retention, retrieval, continuous study, and later cross-language productization.
 
 ---
 
@@ -23,7 +23,11 @@ persistent state on disk
      ↓
 automatic restoration
      ↓
-perception → cognition → action
+evolving environment / world state
+     ↓
+sensory input + networked simulation
+     ↓
+autonomous hypothesis → action → data → knowledge
      ↓
 vector / object / graph memory
      ↓
@@ -32,9 +36,11 @@ continuous learning + pattern memory
 episodic retrieval + autonomous study
      ↓
 COSMOS reusable runtime / evaluation / teaching stack
+     ↓
+Synapse Flow / Synapse OS productization
 ```
 
-For a hiring reviewer, the important signal is not that every early implementation was perfect. It is that the same systems problem was repeatedly **implemented, revised, bounded, measured, and decomposed into more reusable architecture**.
+The hiring signal is not that every early implementation was perfect. It is that the same systems problem was repeatedly **implemented, revised, bounded, measured, corrected, and decomposed into more reusable architecture**.
 
 ---
 
@@ -44,23 +50,24 @@ For a hiring reviewer, the important signal is not that every early implementati
 **Commit:** [`10e86764c6d743b5ceaaaf1baab7279a0d6f0ba5`](https://github.com/PHERACLEASE/test/commit/10e86764c6d743b5ceaaaf1baab7279a0d6f0ba5)  
 **Public timestamp:** `2025-01-30T07:13:05Z`
 
-The 1,908-line source snapshot contains several ideas that later become recurring COSMOS/CST motifs:
+The 1,908-line source snapshot contains:
 
 - an explicit `LearningMechanism`;
 - fixed-size / rolling particle memory;
 - memory updated from frequency-derived information;
-- a neural network used for particle adaptation;
+- memory-informed adaptive behavior;
+- neural-network output participating in adaptation;
 - feedback-driven evolution of mathematical parameters;
-- a `cosmic_brain.json` persistence path that accumulates timestamped state data;
-- loaders for JSON, SQLite, binary BA2, and pickle sources.
+- `cosmic_brain.json` accumulation of timestamped state data;
+- loaders for JSON, SQLite, BA2 and pickle sources.
 
 ### Hiring signal
 
-This is the early stage of the architecture: **incoming information changes retained internal state, retained state participates in future computation, and the system writes evolving state outside the running process.**
+Incoming information changes retained internal state, retained state participates in later computation, and the process writes evolving state outside the running process.
 
 ### Provenance note
 
-This portfolio treats the PHERACLEASE source as an earlier archive in the research lineage supplied by Cory Davis. The public GitHub record independently establishes the code and timestamp; identity/attribution questions should still be evaluated through the portfolio's normal provenance standard rather than inferred from file presence alone.
+Cory identifies `PHERACLEASE` as a legacy account. The public GitHub record independently establishes the source and timestamp, while the identity link is kept as a separate provenance statement because the inspected public profile metadata did not independently cross-link `PHERACLEASE` and `NavisWORLD`.
 
 ---
 
@@ -70,47 +77,108 @@ This portfolio treats the PHERACLEASE source as an earlier archive in the resear
 **Commit:** [`f4e7da1f1bf3fba07a23a3de932e675bea5078bd`](https://github.com/NavisWORLD/CosmicSynapse/commit/f4e7da1f1bf3fba07a23a3de932e675bea5078bd)  
 **Public timestamp:** `2025-02-26T03:46:15Z`
 
-The CST-LM implementation makes the persistence architecture much clearer:
+CST-LM makes the persistence architecture explicit:
 
 - `self.memory = []`;
 - `self.state_file = "cst_lm_state.json"`;
-- `self.load_state()` is called during initialization;
-- `learn(...)` appends new retained items;
-- memory is bounded to 1,000 entries by removing the oldest entry;
-- `save_state()` serializes vocabulary + memory;
-- `load_state()` restores the serialized state.
+- `self.load_state()` during initialization;
+- `learn(...)` appending retained items;
+- memory bounded to 1,000 entries;
+- `save_state()` serializing vocabulary + memory;
+- `load_state()` restoring serialized state.
 
-The larger simulation committed at the same time also carries multiple retained histories and a `cosmic_brain.json` state surface.
+The larger CST simulation committed at the same time also carries multiple retained histories and a `cosmic_brain.json` state surface.
 
 ### Hiring signal
 
-This is a concrete transition from experimental memory into a recognizable software architecture:
+This is the clean transition into a recognizable stateful software architecture:
 
-**learn → retain → bound → serialize → restart → restore**.
+**learn -> retain -> bound -> serialize -> later initialize -> restore**.
 
-That pattern remains one of the strongest through-lines in the later COSMOS work.
+### Code-quality boundary
+
+The historical standalone source is strong disclosure evidence for the architecture. It is not presented as pristine production packaging, and later engineering work should be evaluated separately from this early artifact.
 
 ---
 
-# 2025-10-28 // Autonomous perception → cognition → action
+# 2025-05-21 // Evolving simulated world state + sensory bridge
+
+**Repository:** [`NavisWORLD/The-theory-of-CST`](https://github.com/NavisWORLD/The-theory-of-CST)  
+**Commit:** [`b96a56501cb447cb68e2683915d22024a0c526dd`](https://github.com/NavisWORLD/The-theory-of-CST/commit/b96a56501cb447cb68e2683915d22024a0c526dd)  
+**Public timestamp:** `2025-05-21T08:04:53Z`
+
+This milestone was missing from earlier portfolio versions and materially improves the engineering chronology.
+
+The historical Python/Unity source contains:
+
+- entities with persistent/evolving state such as position, velocity, energy/synaptic variables and ecosystem information;
+- high-dimensional simulation variables projected into a live interactive environment;
+- microphone/audio-derived input feeding the state update path;
+- TCP communication between the Python simulation backend and Unity;
+- procedural generation of planets, atmospheres, ecosystems and visual properties;
+- `MemoryNodeLog` / tokenized logging surfaces for timestamped state observations;
+- continuously interacting entities rather than a single stateless render.
+
+### Hiring signal
+
+The research line expands from **memory inside a model/process** into **state maintained about an evolving environment**.
+
+That is relevant to present-day world-state and spatial-intelligence engineering: persistent scene/entity state, sensory updates, temporal evolution, simulation, and action-relevant representations.
+
+### Claim boundary
+
+This is **not** presented as proof that Cory invented world models, model-based RL, or spatial intelligence. Those fields have older literature and systems. The supported statement is that Cory's public work independently developed a persistent, sensory-driven, evolving environment architecture by May 2025.
+
+---
+
+# 2025-10-28 02:21:23Z // Original A-LMI autonomous learning architecture
+
+**Repository:** [`NavisWORLD/cosmic-synapse-A-lmi`](https://github.com/NavisWORLD/cosmic-synapse-A-lmi)  
+**Commit:** [`527cd7084d25c40275af77b5b7a5397a31ed6179`](https://github.com/NavisWORLD/cosmic-synapse-A-lmi/commit/527cd7084d25c40275af77b5b7a5397a31ed6179)  
+**Public timestamp:** `2025-10-28T02:21:23Z`
+
+This is now the **primary A-LMI chronology anchor**, earlier than the v2 receipt previously used in this portfolio.
+
+The source/documented implementation includes:
+
+- web and audio perception;
+- LightToken processing;
+- Milvus vector memory;
+- MinIO raw/object storage;
+- Neo4j temporal knowledge graph;
+- knowledge-gap discovery;
+- hypothesis generation;
+- action/experiment planning;
+- a closed loop from **hypothesis -> action -> data -> knowledge**;
+- autonomous learning tests and subsystem tests.
+
+### Hiring signal
+
+The system is no longer only retaining state. It is organized around **finding what it does not know, creating work to reduce the gap, storing the result, and repeating**.
+
+That is directly relevant to agent infrastructure, research automation, orchestration, retrieval systems, local AI and experimental R&D.
+
+---
+
+# 2025-10-28 17:05:40Z // A-LMI v2 expansion
 
 **Repository:** [`NavisWORLD/cosmic-synapse-A-lmi-v.2`](https://github.com/NavisWORLD/cosmic-synapse-A-lmi-v.2)  
 **Commit:** [`8af672ff74f5506d1f9d26ae94ddaf1ca91a7962`](https://github.com/NavisWORLD/cosmic-synapse-A-lmi-v.2/commit/8af672ff74f5506d1f9d26ae94ddaf1ca91a7962)  
 **Public timestamp:** `2025-10-28T17:05:40Z`
 
-`a_lmi/core/agent.py` explicitly describes an **A-LMI Autonomous Agent Loop** and implements separate continuous lanes for:
+`a_lmi/core/agent.py` explicitly separates continuous lanes for:
 
-- **Perception:** web and audio inputs become Light Tokens;
-- **Cognition:** processed tokens are stored and checked for reasoning triggers;
-- **Memory:** vector database, object storage, and knowledge-graph clients are used as separate retained stores;
-- **Action:** reasoning results can produce responses, investigations, and learning-goal updates;
-- **Autonomous investigation:** hypotheses can initiate additional data-gathering work.
+- perception;
+- cognition;
+- vector/object/graph memory storage;
+- reasoning triggers;
+- action;
+- autonomous hypothesis investigation;
+- learning-goal handling.
 
 ### Hiring signal
 
-By this point, the work is no longer just about keeping state. It is becoming a **systems architecture for an agent that senses, stores, reasons, acts, and creates additional work for itself**.
-
-This is especially relevant to roles in agent infrastructure, local AI, orchestration, retrieval, autonomous workflows, and experimental R&D.
+v2 remains an important expansion, but it is no longer used to make the original A-LMI look later than it was.
 
 ---
 
@@ -120,20 +188,18 @@ This is especially relevant to roles in agent infrastructure, local AI, orchestr
 **Commit:** [`5172412deec6c037b058ba489c9676a4553a4efe`](https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine/commit/5172412deec6c037b058ba489c9676a4553a4efe)  
 **Public timestamp:** `2025-11-10T01:55:35Z`
 
-The commit adds and integrates:
+The commit adds/integrates:
 
-- a `NeuralNetworkAdapter` with forward/backward learning;
+- a `NeuralNetworkAdapter` with forward/backward updates;
 - `updateMemoryFromNeighbors()` for Hebbian-like neighbor-memory adaptation;
 - live audio-frequency information written into memory slots;
 - `saveTokensToStorage()` / `loadTokensFromStorage()`;
-- automatic token persistence to local storage every 60 seconds;
+- automatic local persistence every 60 seconds;
 - restoration of saved tokens on initialization.
 
 ### Hiring signal
 
-The architectural idea is being tested in a different domain: **realtime creative/simulation software where memory and learned state affect a continuously running system rather than only a chat interface.**
-
-That cross-domain reuse matters. It shows the design motif was not tied to one UI or one model wrapper.
+The architecture is reused in a different domain: **realtime creative/simulation software where learned state affects a continuously running system rather than only a chat interface.**
 
 ---
 
@@ -141,15 +207,13 @@ That cross-domain reuse matters. It shows the design motif was not tied to one U
 
 **Repository:** [`NavisWORLD/infinite-adaptive-audio-12d-universe-engine`](https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine)  
 **Commit:** [`bbae16f878252f722112f3b1dcc5750daea6124c`](https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine/commit/bbae16f878252f722112f3b1dcc5750daea6124c)  
-**Public timestamp:** `2025-11-15T21:13:25Z`
+**Correct public timestamp:** `2025-11-15T21:13:25Z`
 
-The continuous-learning music system adds a fixed-capacity `RingBuffer` and a `BandLearningSystem` with retained pattern memory, confidence, successful-pattern tracking, key-frequency history, and tempo history.
-
-The retained learning state feeds future musical decisions and the live state calculation instead of existing only as a passive log.
+The continuous-learning music system adds a fixed-capacity `RingBuffer` and a `BandLearningSystem` with retained pattern memory, confidence, successful-pattern tracking, key-frequency history and tempo history.
 
 ### Hiring signal
 
-This is a clean example of **bounded memory used as an active control signal** in a realtime adaptive application.
+A clean example of **bounded memory functioning as an active control signal** in a realtime adaptive application.
 
 ---
 
@@ -159,7 +223,7 @@ This is a clean example of **bounded memory used as an active control signal** i
 **Model-lineage commit:** [`68a00b2718ee1ddaf339933f237edba06f4c3a8c`](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-/commit/68a00b2718ee1ddaf339933f237edba06f4c3a8c)  
 **Autonomous-study commit:** [`dd70bc60faf841a51bfbc9dac1014e0462d45658`](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-/commit/dd70bc60faf841a51bfbc9dac1014e0462d45658)
 
-The transformer lineage introduces an explicit `EpisodicMemory` with:
+The transformer lineage includes an explicit `EpisodicMemory` with:
 
 - fixed memory capacity;
 - circular overwrite behavior;
@@ -168,86 +232,110 @@ The transformer lineage introduces an explicit `EpisodicMemory` with:
 - internal-state similarity retrieval;
 - retrieved memory blended back into model processing.
 
-The following autonomous-study experiment implements a continuously running, self-directed study loop that selects curriculum material, trains models, logs outcomes, and saves checkpoints.
+The following autonomous-study experiment continuously selects curriculum/source material, trains models, logs outcomes and saves checkpoints.
 
 ### Hiring signal
 
-The architecture has now progressed from **memory that survives** to **memory that is retrieved because it is relevant**, alongside a separate loop that can continue studying and preserving progress.
+The architecture progresses from **memory that survives or accumulates** to **memory retrieved because it is relevant**, alongside a separate system that continues studying and preserving training progress.
+
+### Boundary
+
+The in-process `EpisodicMemory` is not used as the portfolio's strongest cross-restart receipt because its pointer/fill tracking is ordinary runtime state. February CST-LM remains cleaner for the automatic restoration proposition.
+
+The autonomous study loop is also not represented as an earlier exact implementation of Hermes's later agent-authored reusable `SKILL.md` format.
 
 ---
 
-# 2026 // From research lineage to reusable engineering surfaces
+# 2026 // Consolidation and provenance correction
 
-The 2026 portfolio is the decomposition phase.
+Two major later repositories require special attribution handling.
 
-The earlier ideas are separated into reusable systems and documentation across:
+## `The-Cosmic-Davis-12D-Hebbian-Transformer-ver.4.2`
 
-- local AI runtime and serving;
-- persistent / semantic memory;
-- compact dynamic state;
-- agent and tool lanes;
+Created `2026-02-28T10:33:19Z`.
+
+The repository contains useful later Cory/COSMOS integration work, but its Git history also contains identifiable third-party/Farnsworth ancestry. One concrete example is a Jan. 25, 2026 Timo White commit adding files described as Q1-2025 enhanced-memory features.
+
+Therefore the portfolio does **not**:
+
+- use a filename such as `test_q1_2025_features.py` to backdate Cory's work;
+- relabel Timo White/Farnsworth commits as Cory-authored;
+- use imported history to establish Cory priority that is already better supported by independent 2025 source receipts.
+
+## `Cosmos`
+
+Created `2026-02-28T23:45:11Z`.
+
+This is a later integration/consolidation surface with clear Farnsworth ancestry as well as COSMOS-specific additions. File presence inside `Cosmos` is therefore not automatically equivalent to Cory authorship or a 2025 date.
+
+### Hiring signal
+
+This correction strengthens the portfolio. A reviewer can see that **provenance is audited rather than flattened** and that strong 2025 claims rely on cleaner independent source history.
+
+---
+
+# 2026-08 // From research lineage to reusable engineering surfaces
+
+The August 2026 work is the productization/decomposition phase. Earlier motifs are split into reusable public systems across:
+
+- persistent/semantic memory;
 - CNS-style adapters;
 - bio/sensory integration;
-- evaluation and mechanism-liveness testing;
-- realtime music systems;
-- media-generation continuity;
+- quantum provenance bridges;
+- realtime music;
 - simulation;
+- media continuity;
 - Rust / C++ / Python integration;
 - accessibility and human-reviewed workflows;
-- manuals, teacher guides, build guides, proof ledgers, and provenance records.
+- manuals, teaching guides and evidence ledgers.
 
-The portfolio intentionally preserves failed experiments and null results alongside the surviving architecture.
+## Synapse Flow / Synapse OS
+
+[`NavisWORLD/Synapse-os-`](https://github.com/NavisWORLD/Synapse-os-) adds a distinct 2026 systems layer. Commit `d11bc54263f240b1b2cb01159a0a3d23086c7995` on `2026-08-13T19:21:59Z` promotes Synapse Flow into a bounded state-oriented `.syn` language with state, expressions, control flow, procedures, modules, assertions, deterministic limits, allowlisted expression evaluation, tests and OS-facing control statements.
+
+This is presented as a **2026 language/runtime achievement**, not retroactively inserted into the 2025 priority chain.
 
 ---
 
 # Why this matters to a hiring team
 
-A recruiter does not need to believe every hypothesis in CST to evaluate the engineering signal.
-
-The public timeline demonstrates repeated work on problems that are now central to modern AI systems:
-
-| Engineering problem | Public lineage |
+| Engineering problem | Verified public lineage |
 |---|---|
-| Stateful systems | rolling state → serialized state → restored state |
-| Long-running memory | bounded lists → ring buffers → episodic retrieval |
-| Agent architecture | perception → cognition → memory → reasoning → action |
-| Retrieval | vector memory / object storage / graph memory → episodic similarity search |
-| Continuous adaptation | explicit learning updates → neighbor learning → pattern confidence |
-| Autonomous work | hypothesis-triggered investigation → continuous study loops |
-| Reproducibility | Git history → hashes → DOI → benchmark/proof ledgers |
-| Engineering maturity | preserve early versions → find failures → correct → modularize → teach |
+| Stateful systems | rolling state -> serialized state -> restored state |
+| Environment/world state | evolving entities -> sensory updates -> networked simulation |
+| Long-running memory | bounded lists -> ring buffers -> episodic retrieval |
+| Agent architecture | perception -> memory -> hypothesis -> action -> new data |
+| Retrieval | vector/object/graph memory -> episodic similarity search |
+| Continuous adaptation | explicit memory updates -> neighbor learning -> pattern confidence |
+| Autonomous work | knowledge-gap investigation -> continuous study loops |
+| Reproducibility | Git history -> hashes -> DOI -> benchmark/proof ledgers |
+| Provenance discipline | independent source receipts -> mixed-lineage correction -> explicit attribution boundaries |
+| Engineering maturity | preserve early versions -> find failures -> correct -> modularize -> teach |
 
-The hiring case is therefore broader than any one algorithm:
+The hiring case is broader than any single algorithm:
 
-> **Cory repeatedly takes an unusual systems concept, makes it executable, keeps the historical lineage, discovers where it breaks, and turns the surviving mechanism into something another engineer can inspect and reuse.**
-
-That is the portfolio's strongest through-line.
+> **Cory repeatedly takes an unusual systems concept, makes it executable, preserves the lineage, discovers where it breaks, and turns the surviving mechanism into something another engineer can inspect and reuse.**
 
 ---
 
 # Prior-art / defensive-publication note
 
-Some of these dated public source records may also have **defensive prior-art value** because they are publicly accessible technical disclosures.
+Some dated source records may have defensive-publication relevance because they are dated technical disclosures. This page does not use the phrase "prior art" to claim ownership of abstract ideas, global first invention, copying by another party, patent invalidity, or legal exclusivity.
 
-That is not the purpose of this page, and this portfolio does not use the phrase "prior art" to claim ownership of an abstract idea, copying by another party, patent invalidity, or legal exclusivity.
-
-Patent relevance is claim-specific and depends on applicable law, effective filing dates, public accessibility, enablement, and what each reference actually teaches.
+Patent relevance is claim-specific and depends on applicable law, effective filing dates, historical public accessibility, enablement and what each reference actually teaches.
 
 For this portfolio, the simpler point is enough:
 
-**the source history exists, the mechanisms can be inspected, and the evolution of the engineering can be dated.**
+**the source history exists, the mechanisms can be inspected, the attribution boundaries are stated, and the engineering evolution can be dated.**
 
 ---
 
 # Review path
 
-For a fast technical review:
-
-1. Start with this page.
-2. Open the linked historical commits.
-3. Read [`TIMELINE.md`](TIMELINE.md) for the larger career/research/public-artifact clock.
-4. Read [`PROVENANCE.md`](PROVENANCE.md) for attribution boundaries.
-5. Read [`PROOF_LEDGER.md`](PROOF_LEDGER.md) for what counts as implementation, observation, measurement, NULL, or hypothesis.
-6. Continue to [`projects.html`](projects.html) or [`offerings.html`](offerings.html) for the present-day systems and hiring map.
+1. Open the linked historical commits.
+2. Read [`TIMELINE.md`](TIMELINE.md) for the full multi-clock chronology.
+3. Read [`PROVENANCE.md`](PROVENANCE.md) for attribution boundaries.
+4. Read [`PROOF_LEDGER.md`](PROOF_LEDGER.md) for implementation/measurement/null standards.
+5. Continue to [`projects.html`](projects.html) or [`offerings.html`](offerings.html) for the present-day systems and hiring map.
 
 **BUILD STRANGE // MEASURE HARD // LEAVE A MAP**
