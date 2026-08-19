@@ -10,13 +10,43 @@
                document → package → teach → ship / iterate
 ```
 
-This page translates the project universe into practical value for a hiring manager, engineering lead, founder, lab, creative team, school/assistive-tech organization, or collaborator.
+This page translates the project universe into practical value for a hiring manager, engineering lead, founder, lab, creative team, school/assistive-tech organization, collaborator, **or venture investor**.
 
 ## The shortest version
 
 I am strongest when a problem crosses boundaries: **software + hardware, AI + persistent state, research + product, realtime media + inference, prototype + documentation, or creative concept + measurable implementation.**
 
 I do not need the starting point to be clean. A large part of the work represented in this portfolio is turning messy experimental systems into inspectable modules with explicit interfaces, tests, failure modes, evidence labels, and rebuild instructions.
+
+---
+
+## VC // The platform behind the projects
+
+For an investor, the portfolio is best understood as more than a collection of applications.
+
+The common platform thesis is **stateful local intelligence connected to the real world, with evidence and owner control**:
+
+- model-agnostic local/edge AI;
+- persistent memory and world state;
+- realtime audio, sensor, vision, and device interfaces;
+- simulation and embodied-learning loops;
+- bounded agents and tools;
+- Rust/C++/Python/browser portability;
+- provenance, evaluation, health checks, and recovery;
+- opt-in longitudinal learning data whose raw history can remain user-controlled.
+
+That architecture can support personal AI, robotics, private enterprise AI, creative systems, simulation, education, accessibility, manufacturing, research, and future embodied machines.
+
+The robotics opportunity is particularly important. A useful robot needs more than a model: it needs perception, memory, state, action, feedback, recovery, and learning across time. COSMOS, Reality Bridge, the simulation work, sensory interfaces, agents, and cross-language tooling contain pieces of that loop. The venture target is to turn those pieces into a standardized **embodied-learning substrate** capable of generating consented, high-frequency action/outcome traces for reinforcement learning, imitation learning, personalization, failure recovery, and human-robot collaboration.
+
+This is a product hypothesis, not a claim that the portfolio already owns an unmatched robotics dataset. The differentiation to test is whether a local-first platform can create longitudinal experience data that large scraped-web datasets do not naturally contain, while giving users and partners explicit control over participation, revocation, provenance, and compensation.
+
+The long-term human mission is equally important: **automation should buy people their time back.** If AI and robotics create large productivity gains, I want the systems and business models around them to support shorter workweeks, broader ownership, data dividends, universal dividends, UBI-style structures, or other mechanisms that spread the benefit rather than concentrating it.
+
+The north star is not a world where people are forbidden from working. It is a world where nobody is forced into unsafe or meaningless labor simply to deserve food, shelter, education, healthcare, creativity, family time, or dignity.
+
+**Full investor thesis:** [`VC_VISION.md`](VC_VISION.md)  
+**Investor web page:** [`vc.html`](vc.html)
 
 ---
 
@@ -253,6 +283,7 @@ Give me a concrete problem and let the artifact speak:
 AI Systems Builder · Independent Researcher · Electronics & Technical Operations  
 `pheras.king@gmail.com`
 
+**Venture vision:** [`VC_VISION.md`](VC_VISION.md)  
 **Source map:** [`REPOSITORY_UNIVERSE.md`](REPOSITORY_UNIVERSE.md)  
 **Timeline:** [`TIMELINE.md`](TIMELINE.md)  
 **Publications:** [`PUBLICATIONS.md`](PUBLICATIONS.md)  
