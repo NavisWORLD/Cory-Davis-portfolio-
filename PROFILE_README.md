@@ -1,12 +1,11 @@
 <div align="center">
 
-<img src="https://avatars.githubusercontent.com/u/200881305?v=4" width="150" alt="Cory Davis / NavisWORLD" />
+<img src="./assets/navisworld-readme-hero.svg" width="100%" alt="NavisWORLD cosmic terminal profile banner" />
 
 # CORY DAVIS // NAVISWORLD
+### COSMOS • ZEREF • DAVIS CST • SYNAPSE OS • REALITY BRIDGE
 
-### Founder of COSMOS • ZEREF • Davis CST • Synaptic Z Systems
-
-**Local AI • Persistent Memory • Dynamic State • Agents • Simulation • Robotics • Creative Computing • Research Tooling**
+**Local AI • Persistent Memory • Dynamic State • Agents • Simulation • Robotics • Creative Computing • Reproducible Research**
 
 [![GitHub](https://img.shields.io/badge/GitHub-NavisWORLD-181717?logo=github)](https://github.com/NavisWORLD)
 [![Portfolio](https://img.shields.io/badge/Portfolio-PUBLIC_ENGINEERING_RECORD-0d1117)](https://github.com/NavisWORLD/Cory-Davis-portfolio-)
@@ -15,312 +14,351 @@
 
 </div>
 
-```text
-                         .        *        .       +
-                *              .      .
-                         ╭──────────────╮
-                    .    │  NAVISWORLD  │       *
-                         ╰──────┬───────╯
-                                │
-                    ╭───────────┴───────────╮
-                    │       ◢██████◣        │
-              *     │     ◢██      ██◣      │       .
-                    │    ██   ◉  ◉   ██     │
-                    │    ██    ╱╲    ██     │
-                    │     ◥██  ╲╱  ██◤      │
-                    │       ◥██████◤        │
-                    │          │            │
-          .         │      ╭───┴───╮        │
-                    │      │  ✦◎✦  │        │
-                    │      ╰───┬───╯        │
-                    │     ╱     │     ╲      │
-                    │   ╱       │       ╲    │
-                    ╰───────────┬───────────╯
-                                │
-             COSMOS ────────────┼──────────── ZEREF
-                                │
-                    CST / SYNAPSE / REALITY BRIDGE
+---
 
-┌──────────────────────────────────────────────────────────────────────────────┐
-│ OS        : Windows • Linux • Android • Browser • Portable runtimes         │
-│ STACK     : Python • Rust • C++ • JavaScript • HTML/CSS • Bash             │
-│ AI        : Ollama • GGUF • local model routing • agents • tools            │
-│ STATE     : dyn12 • dyn42 • dyn54 • Hebbian/plasticity experiments          │
-│ MEMORY    : persistent • semantic • episodic • graph • bounded pattern      │
-│ INPUTS    : audio • sensor summaries • heartbeat rhythm • browser streams   │
-│ SYSTEMS   : COSMOS • ZEREF • Synapse OS • Reality Bridge • GENESIS          │
-│ RESEARCH  : causal tests • ablations • provenance • null preservation       │
-│ MISSION   : user-owned, local, inspectable, evolving AI systems             │
-└──────────────────────────────────────────────────────────────────────────────┘
+## ⚡ SYSTEM STATUS // WHAT I HAVE BUILT
+
+| Domain | Build / achievement | State |
+|---|---|---|
+| **Local AI Runtime** | Portable local model serving, Ollama/GGUF workflows, web/API/CLI surfaces, health checks and recovery paths | ✅ Implemented |
+| **Persistent Memory** | Save/load restoration, semantic memory, episodic memory, graph memory, bounded pattern memory and long-lived state | ✅ Implemented / source-linked |
+| **Davis CST / 12D** | Compact evolving state, recurrence, nonlinear controls, state affinity, learned gating and state-aware attention experiments | 🧪 Research + measured experiments |
+| **dyn12 / dyn42 / dyn54** | Multi-level dynamic-state ladder with diagnostic and comparative evaluation tooling | 🧪 Experimental |
+| **Hebbian / Plasticity** | Hebbian-style and plasticity-oriented state/memory experiments across multiple model and controller layers | 🧪 Experimental |
+| **COSMOS** | Local-first cognitive/runtime workspace joining model serving, persistent memory, state, tools, sensory summaries, evaluation and provenance | ✅ Integrated system / active |
+| **ZEREF** | Persistent reasoning/coding-agent research lane with tools, memory, self-repair observations, permissions, logging and containment experiments | 🧪 Experimental |
+| **Autonomous Agents** | Knowledge-gap discovery, hypothesis → action → data → knowledge loops, coding agents and bounded autonomy | ✅ Implemented / experimental |
+| **Synapse OS / Flow** | `.syn` state-oriented language/runtime with procedures, modules, assertions, safe expression evaluation and deterministic execution limits | ✅ 2026 engineering |
+| **Reality Bridge** | Universal probe/simulation interfaces, world-state experimentation and realtime creative computing surfaces | ✅ Implemented / experimental |
+| **Realtime Audio** | Web Audio instruments, signal analysis, adaptive accompaniment, looping, recording and AI conductor/band systems | ✅ Playable builds |
+| **Simulation / World State** | Persistent entity/world state, temporal updates, deterministic simulation and universe-style computational environments | ✅ Implemented / experimental |
+| **Cross-language Engineering** | Python, Rust, C++17, C ABI/FFI, CMake/Cargo, browser JavaScript and shared JSON contracts | ✅ Implemented |
+| **Sensor / CNS Work** | CNS-style routing, browser/audio/sensor summaries and bio-integration research prototypes | 🧪 Prototype / research |
+| **Heartbeat-derived Interfaces** | Rhythm/signature extraction for creative and memorial continuity tooling | 🧪 Bounded prototype |
+| **Quantum-classical Bridges** | IBM/Azure integration prototypes, entropy/provenance tooling and matched comparison experiments | 🧪 Experimental |
+| **Generative Media** | Local image/video/storybook workflows with continuity state, deterministic receipts and resumable branch exploration | ✅ Implemented / experimental |
+| **Research Infrastructure** | Baselines, ablations, causal pairing, state/gate diagnostics, experiment ledgers and preserved null results | ✅ Core methodology |
+| **Technical Documentation** | Rebuild manuals, universe manuals, teacher guides, troubleshooting trees, provenance ledgers and architecture docs | ✅ Extensive corpus |
+
+---
+
+# 🧠 COSMOS
+
+**COSMOS is my local-first AI operating/runtime environment.** It is designed around the idea that the useful layer around a model can survive changes in the underlying model itself.
+
+```text
+                    ┌───────────────────────┐
+                    │  INTERCHANGEABLE LLM  │
+                    │ Ollama / GGUF / other │
+                    └───────────┬───────────┘
+                                │
+       ┌────────────────────────┼────────────────────────┐
+       ▼                        ▼                        ▼
+  PERSISTENT                DYNAMIC                  TOOLS /
+    MEMORY                    STATE                   AGENTS
+       │                        │                        │
+       └────────────────────────┼────────────────────────┘
+                                ▼
+                           COSMOS LAYER
+                                │
+       ┌────────────────────────┼────────────────────────┐
+       ▼                        ▼                        ▼
+  SENSORY / CNS           EVALUATION             PROVENANCE /
+   INTERFACES               + TESTS                 RECOVERY
 ```
 
-> **Build strange. Measure hard. Leave a map.**
+### COSMOS capabilities and engineering lanes
+- local model runtime and routing
+- persistent state across executions
+- semantic, episodic and graph memory experiments
+- dyn12 / dyn42 / dyn54 internal-state research
+- PHOS and controller experiments
+- internal monologue / feedback-loop research
+- autonomous coding / tool agents
+- browser, API and CLI interfaces
+- audio and sensor-summary interfaces
+- portable runtime packaging
+- health checks, fallback routes and recovery tooling
+- causal probes, ablations and experiment evidence ledgers
 
-I build systems where AI, memory, state, simulation, hardware, creative tools and reproducible research collide. My work is centered on **local-first intelligence that can retain state across sessions, interact with tools and sensors, recover from failure, expose its evidence trail and remain inspectable by the person running it.**
-
----
-
-## ⚡ BUILD RECORD
-
-| Area | What I built / researched | Status |
-|---|---|---|
-| **Local AI runtime** | Portable model serving, Ollama/GGUF workflows, web/API/CLI surfaces, model routing and recovery | ✅ Implemented across COSMOS lineage |
-| **Persistent memory** | Save/load restoration, semantic and episodic memory, graph memory, bounded pattern memory and long-lived state | ✅ Implemented / source-linked |
-| **Dynamic internal state** | Davis CST 12D, dyn12/dyn42/dyn54, PHOS, state routing and Hebbian/plasticity experiments | 🧪 Research + measured experiments |
-| **Autonomous agents** | Knowledge-gap discovery, hypothesis → action → data → knowledge loops, coding/tool agents and bounded autonomy | ✅ Implemented / experimental |
-| **ZEREF** | Experimental reasoning/coding agent with persistence, tools, self-repair observations, containment, permissions and run logs | 🧪 Experimental |
-| **Simulation / world state** | Persistent entity/world state, temporal updates, deterministic simulation, universe/probe engines | ✅ Implemented / experimental |
-| **Realtime audio** | Web Audio engines, adaptive accompaniment, signal analysis, looping, recording and AI band/conductor interfaces | ✅ Playable builds |
-| **Multimodal / sensory** | Browser/audio/sensor summaries, heartbeat-derived rhythm inputs, CNS-style routing and bio-integration prototypes | 🧪 Prototype / research |
-| **Cross-language systems** | Python, Rust, C++17, C ABI/FFI, browser JavaScript, CMake/Cargo and shared JSON contracts | ✅ Implemented |
-| **Language / OS work** | Synapse Flow `.syn` language/runtime, bounded execution, modules, assertions and OS-facing experiments | ✅ 2026 engineering |
-| **Quantum-classical experiments** | IBM/Azure integration prototypes, entropy/provenance experiments and quantum-inspired comparisons | 🧪 Experimental, claims separated from evidence |
-| **Evidence engineering** | SHA-256 provenance, experiment ledgers, baselines, ablations, causal pairing, failure logs and preserved nulls | ✅ Core methodology |
-| **Documentation** | Universe manuals, rebuild guides, technical monographs, teacher/student material, troubleshooting and reviewer docs | ✅ Extensive corpus |
+> Persistence, autonomy, self-description or sensor state are engineering properties. They are not presented here as proof of consciousness.
 
 ---
 
-# 🧠 FLAGSHIP SYSTEMS
+# ⚔️ ZEREF
 
-<table>
-<tr>
-<td width="50%" valign="top">
+ZEREF is the **agent/autonomy research lane** of the ecosystem: a persistent reasoning and coding system used to study how memory, state, tools, recovery and constraints change agent behavior.
 
-## COSMOS
-
-**Local-first AI operating/runtime layer**
-
-COSMOS combines model serving, persistent memory and state, adaptive routing, tool use, multimodal/sensory interfaces, recovery, evaluation and provenance into one portable workspace.
-
-**Core surfaces**
-- local Ollama/GGUF execution
-- persistent and semantic memory
-- dyn12 / dyn42 / dyn54 state lanes
-- Hebbian/plasticity experiments
-- agents and autonomous coding tools
-- browser/API/CLI interfaces
-- health checks and recovery paths
-- experiment receipts and evidence ledgers
-
-</td>
-<td width="50%" valign="top">
-
-## ZEREF
-
-**Experimental persistent reasoning/coding agent**
-
-ZEREF is the autonomous-agent research lane inside the wider ecosystem. The work studies persistent state, memory-driven adaptation, tool use, failure, self-repair behavior, containment boundaries, permissions, logging and controlled comparisons.
-
-**Research focus**
+### ZEREF research surfaces
 - persistent agent state
-- coding/tool execution
+- memory-conditioned behavior
+- code-writing and tool-use workflows
+- controlled self-repair observations
+- checkpointing and restart continuity
 - bounded autonomy
-- recovery after failure
-- observable behavior under constraints
-- reproducible containment tests
+- permissions and containment boundaries
+- paired runs and behavioral comparisons
+- tool-selection / exploration measurements
+- run logs and evidence preservation
 
-</td>
-</tr>
+The safety model keeps credential extraction, production-system access, security-control tampering, evidence destruction and uncontrolled persistence outside the experiment off-limits.
 
-<tr>
-<td width="50%" valign="top">
+---
 
-## DAVIS COSMIC SYNAPSE THEORY // CST
+# 🧬 DAVIS COSMIC SYNAPSE THEORY // CST
 
-**Dynamic-state ML research lineage**
+CST is my dynamic-state research framework. The software lineage explores whether a compact evolving state can influence model behavior in a measurable and falsifiable way.
 
-CST is the research framework behind the 12D and later dynamic-state architectures. The software work explores compact evolving state, recurrence, nonlinear controls, state affinity, memory, gating, Hebbian/plasticity mechanisms and falsifiable state-aware attention experiments.
+**Core research ideas**
+- 12D compact state representation
+- dyn12 / dyn42 / dyn54 extensions
+- recurrence and state carryover
+- state affinity
+- nonlinear control signals
+- learned and hand-designed gating
+- bounded memory
+- Hebbian/plasticity-inspired updates
+- state-aware attention experiments
+- causal disablement / ablation testing
 
 Public anchors:
-- [The theory of CST](https://github.com/NavisWORLD/The-theory-of-CST)
-- [12D Hebbian Transformer](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-)
+- [The Theory of CST](https://github.com/NavisWORLD/The-theory-of-CST)
+- [The Cosmic Davis 12D Hebbian Transformer](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-)
+- [12D Hebbian Transformer v4.20](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-ver.4.20)
 - [Zenodo deposited record](https://doi.org/10.5281/zenodo.17574447)
 
-</td>
-<td width="50%" valign="top">
+---
 
-## SYNAPSE OS // SYNAPSE FLOW
+# 🖥️ SYNAPSE OS // SYNAPSE FLOW
 
-**Language/runtime + OS engineering**
+[Synapse OS](https://github.com/NavisWORLD/Synapse-os-) is the language/runtime and OS-facing engineering branch of the project family.
 
-A bounded state-oriented `.syn` language/runtime with state, expressions, control flow, procedures, modules, assertions, safe evaluation and deterministic execution limits, alongside OS-facing engineering experiments.
+### Synapse Flow
+A bounded `.syn` language/runtime with:
+- state and expressions
+- control flow
+- procedures
+- modules
+- assertions
+- allowlisted / safe expression evaluation
+- deterministic execution limits
+- OS-facing runtime operations
+- tests and documentation
 
-Public source:
-- [Synapse OS](https://github.com/NavisWORLD/Synapse-os-)
+This is a **2026 engineering achievement** and is kept separate from earlier 2025 source chronology.
 
-</td>
-</tr>
+---
 
-<tr>
-<td width="50%" valign="top">
+# 🌉 REALITY BRIDGE
 
-## REALITY BRIDGE // ALIEN CONDUCTOR
-
-**Realtime creative computing and adaptive music**
-
-A family of browser-native audio systems that analyze sound, maintain shared musical state and generate/react in realtime through accompaniment, looping, recording and modular musician/conductor architecture.
-
-Public source:
-- [Reality Bridge Universal Probe Engine](https://github.com/NavisWORLD/Reality-bridge-universal-probe-engine-sim-)
-
-</td>
-<td width="50%" valign="top">
-
-## THE BEAST BOX
-
-**Portable local AI + robotics compute hub**
-
-A modular environment for packaging local AI, runtime components, model assets, tooling and hardware-facing integrations into a portable system that can be moved between machines and low-resource devices.
+Reality Bridge is the umbrella for **simulation, sensing, creative interfaces and computational world/probe systems**.
 
 Public source:
-- [The Beast Box](https://github.com/NavisWORLD/The-beast-box-)
+- [Reality Bridge Universal Probe Engine Sim](https://github.com/NavisWORLD/Reality-bridge-universal-probe-engine-sim-)
 
-</td>
-</tr>
+### What the Reality Bridge branch includes
+- persistent scene/entity state
+- seeded and deterministic simulation
+- universal probe concepts
+- realtime visualization
+- browser-native interfaces
+- audio-reactive systems
+- local AI integration
+- sensor/bio summary routing
+- CAD/device/schematic exploration in adjacent project work
 
-<tr>
-<td width="50%" valign="top">
+---
 
-## COSMOS MEDIA
+# 🎵 ALIEN CONDUCTOR // ADAPTIVE AUDIO
 
-**Local generative image/video/storybook workflows**
+The music branch applies the same state-and-memory thinking to realtime sound.
 
-A local-first media-engine lineage using continuity state, deterministic receipts, candidate branches, resumable workflows, API surfaces and cross-language components.
+### Built / researched
+- Web Audio instruments
+- live input analysis
+- pitch/key/chord/tempo inference experiments
+- shared musical state
+- confidence tracking
+- look-ahead scheduling
+- generated accompaniment
+- looping and recording
+- musician / conductor role separation
+- local AI band concepts
+
+Public source:
+- [Infinite Adaptive Audio 12D Universe Engine](https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine)
+
+---
+
+# 🌌 SIMULATION / LIVING UNIVERSE WORK
+
+I have built and reconstructed simulation systems that retain world state and evolve it through time instead of treating each run as a disconnected frame.
+
+Public source:
+- [Cosmic Synapse Living Universe Sim Engine](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-)
+
+Research/build themes:
+- evolving persistent worlds
+- entity state
+- temporal updates
+- procedural generation
+- sensor/world bridges
+- deterministic receipts
+- realtime render surfaces
+- state communication between systems
+
+---
+
+# 📼 GENERATIVE MEDIA SYSTEMS
 
 Public source:
 - [Cosmic Quantum Video Picture Generator](https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-)
 
-</td>
-<td width="50%" valign="top">
+Build themes:
+- local-first generation workflows
+- continuity state for characters/scenes
+- resumable long-form work
+- deterministic receipts
+- candidate/branch exploration
+- HTTP/JSONL integration
+- Rust/C++ surfaces
+- installable browser/PWA interfaces
 
-## LIVING UNIVERSE / SIMULATION ENGINES
-
-**Persistent simulation, world-state and probe research**
-
-Work spanning seeded/deterministic simulation, evolving entity state, probe engines, realtime visualization and experimental universe-style computational environments.
-
-Public source:
-- [Living Universe Sim Engine](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-)
-
-</td>
-</tr>
-</table>
+`Multiverse` terminology in this branch refers to **computational candidate branches**, not evidence of physical multiverse access.
 
 ---
 
-# 🧬 MEMORY, CNS, BIO + SENSOR WORK
+# 🧠 MEMORY + CNS + RECONCILIATION
 
-The ecosystem contains reusable research lanes for long-term memory, state reconciliation and sensory routing:
+Reusable memory/state surfaces include:
 
-- **Reconciliation / continuity memory** for long-lived state and archive reconstruction
-- **CNS-style adaptive connectors** for routing signals between model, state, memory and tools
-- **Bio/sensor integration prototypes** for translating external signals into bounded machine-readable summaries
-- **Heartbeat-derived rhythm inputs** used as timing/signature data in memorial and creative systems
-- **Persistent world/entity state** with timestamps and restoration across sessions
-- **Graph, vector, object and episodic memory experiments** across multiple architectures
+- rolling and bounded memory
+- save/load restoration
+- persistent JSON state
+- semantic memory
+- episodic retrieval
+- graph memory
+- vector/object/graph multi-store designs
+- knowledge-gap discovery
+- long-running checkpointing
+- state reconciliation after restarts
+- CNS-style signal routing between model, memory, tools and inputs
 
-Public reference builds:
+Public sources:
 - [Cosmic Reconciliation Manual](https://github.com/NavisWORLD/Cosmic-reconciliation-manual-)
-- [CNS Adaptive Connector](https://github.com/NavisWORLD/CNS-central-nervous-system-adaptive-connector-)
+- [CNS Central Nervous System Adaptive Connector](https://github.com/NavisWORLD/CNS-central-nervous-system-adaptive-connector-)
 
 ---
 
-# 🤖 AGENT + AUTONOMY LINEAGE
-
-One of the strongest through-lines in my work is moving from chat-only AI toward **stateful systems that can inspect a problem, form an internal task, act through tools, record the result and continue from the new state.**
+# 🤖 AUTONOMY LINEAGE
 
 ```text
-perception / input
+input / perception
        │
        ▼
  persistent memory ─────► dynamic state
        │                     │
        └──────────┬──────────┘
                   ▼
-          gap / hypothesis
+          knowledge gap
                   │
                   ▼
-              action
+             hypothesis
                   │
                   ▼
-               data
+               action
                   │
                   ▼
-              knowledge
+                data
+                  │
+                  ▼
+             knowledge
                   │
                   └────────► memory / next state
 ```
 
-This lineage includes autonomous research loops, coding agents, recovery tooling, bounded memory, episodic retrieval, continuous study/checkpointing and controlled agent experiments.
+This lineage includes autonomous study, research-loop prototypes, coding agents, tool use, memory-conditioned behavior, recovery and restart continuity.
 
 ---
 
-# 🎛️ CREATIVE COMPUTING
+# 🛠️ THE BEAST BOX
 
-I also use the same state/memory architecture for creative systems rather than treating creativity as a separate domain.
+[The Beast Box](https://github.com/NavisWORLD/The-beast-box-) is the portable deployment / compute-hub branch of the ecosystem.
 
-### Music + audio
-- realtime Web Audio instruments
-- adaptive accompaniment
-- pitch/key/chord/tempo inference experiments
-- looping and recording
-- conductor/musician role separation
-- shared musical state and confidence
-- local AI band concepts
-
-Public source:
-- [Infinite Adaptive Audio 12D Universe Engine](https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine)
-
-### Image + video + narrative systems
-- persistent scene/character continuity state
-- resumable generation workflows
-- deterministic run receipts
-- branch/candidate exploration
-- local-first interfaces and APIs
+It packages the ideas behind local model execution, model assets, runtimes, tools, portability and hardware-facing integration into a system that can move between machines and constrained devices.
 
 ---
 
-# 🧪 RESEARCH RULE: NO FAKE WINS
+# 📚 MANUALS + TEACHING
 
-I keep **implemented**, **observed**, **measured**, **null**, **experimental** and **hypothesis-level** claims separate.
+I document systems so someone else can reproduce, inspect, reject or rebuild them.
+
+Public manuals and navigation:
+- [Volume I: The COSMOS CST Universe Manual](https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual.)
+- [Cosmic Reconciliation Manual](https://github.com/NavisWORLD/Cosmic-reconciliation-manual-)
+- [Cory Davis Portfolio OS](https://github.com/NavisWORLD/Cory-Davis-portfolio-)
+
+Documentation work includes:
+- system architecture maps
+- teacher/student guides
+- rebuild procedures
+- troubleshooting trees
+- benchmark notes
+- provenance/claim matrices
+- installation and recovery documentation
+- hardware/software integration notes
+- cross-language examples
+- experiment receipts and failure logs
+
+---
+
+# 🔬 PROOF MODEL // NO FAKE WINS
 
 ```text
 SHA-256          -> exact artifact identity
-Git history      -> source / chronology / authorship evidence
+Git history      -> version / authorship / mechanism chronology
 DOI              -> deposited citable record
-runtime log      -> mechanism actually executed
-controlled test  -> declared metric under captured conditions
-ablation         -> mechanism disabled / isolated
-NULL             -> declared success condition was not supported
+runtime log      -> mechanism executed under captured conditions
+controlled test  -> declared metric under captured code/data/seeds
+ablation         -> mechanism isolated or disabled
+replication      -> reproduced result in the declared scope
+NULL             -> declared success criterion was not supported
 ```
 
-### Preserved nulls and corrections
+### Evidence vocabulary
+- **IMPLEMENTED** — inspectable code/artifact exists
+- **OBSERVED** — captured runtime evidence shows execution/state
+- **MEASURED** — a declared benchmark produced a metric
+- **NULL** — the declared success condition was not supported
+- **HYPOTHESIS** — falsifiable proposition awaiting evidence
+- **METAPHOR / MODEL** — conceptual or design language, not literal physics/biology without separate evidence
 
+### Nulls intentionally preserved
 - A documented paired measured-state benchmark did **not** beat plain attention under its declared success criterion.
 - Matched quantum-randomness comparisons do **not** establish a general ML-accuracy advantage.
-- Higher-dimensional state variants did **not** monotonically outperform compact dyn12 in the documented state ladder.
-- Mixed-lineage repositories are labeled at file/commit level rather than used to manufacture earlier chronology.
+- Higher-dimensional state variants did **not** monotonically outperform compact dyn12 in the documented ladder.
 
-The point is not to protect a theory. The point is to make the mechanism inspectable enough to survive being wrong.
+**The goal is not to protect a theory. The goal is to make the mechanism inspectable enough to survive being wrong.**
 
 ---
 
-# 🕰️ SOURCE-LINKED ENGINEERING TIMELINE
+# 🕰️ SOURCE-LINKED TIMELINE
 
 | Time | Milestone |
 |---|---|
-| **Jan 2025** | Adaptive retained memory and persistent accumulation lineage |
+| **Jan 2025** | Adaptive retained-memory and persistent accumulation lineage |
 | **Feb 2025** | Bounded model memory with save/load restoration across executions |
 | **May 2025** | Evolving persistent environment/world state with sensory bridge and timestamped logging |
-| **Oct 2025** | Knowledge-gap discovery + hypothesis → action → data → knowledge autonomous loop |
+| **Oct 2025** | Knowledge-gap discovery plus hypothesis → action → data → knowledge autonomous loop |
 | **Nov 2025** | Online learning, bounded pattern memory, episodic retrieval and autonomous study/checkpointing |
 | **2026** | COSMOS consolidation, dyn12/dyn42/dyn54 research, cross-language libraries, provenance/evaluation tooling, portable runtimes and agent experiments |
-| **Aug 2026** | Synapse Flow / Synapse OS, expanded public manuals, Reality Bridge systems, portable local AI kits and ZEREF/COSMOS release work |
+| **Aug 2026** | Synapse Flow / Synapse OS, expanded manuals, Reality Bridge systems, portable local AI kits and COSMOS/ZEREF release work |
 
-Full chronology and provenance:
-- [Technical Lineage](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/TECHNICAL_LINEAGE.md)
-- [Timeline](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/TIMELINE.md)
-- [Proof Ledger](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/PROOF_LEDGER.md)
+Full source maps:
+- [TECHNICAL_LINEAGE.md](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/TECHNICAL_LINEAGE.md)
+- [TIMELINE.md](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/TIMELINE.md)
+- [PROOF_LEDGER.md](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/PROOF_LEDGER.md)
+- [PROVENANCE.md](https://github.com/NavisWORLD/Cory-Davis-portfolio-/blob/main/PROVENANCE.md)
 
 ---
 
@@ -338,75 +376,52 @@ Full chronology and provenance:
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=fff)
 ![Ollama](https://img.shields.io/badge/Ollama-local_AI-111111)
 ![GGUF](https://img.shields.io/badge/GGUF-portable_models-5b5bff)
-![Web Audio](https://img.shields.io/badge/Web_Audio-realtime_audio-ff3e7f)
 
 </div>
 
-### Systems work
-`local inference` • `persistent memory` • `state machines` • `agent orchestration` • `REST APIs` • `CLI tools` • `PWA/browser apps` • `FFI/C ABI` • `CMake/Cargo` • `simulation` • `telemetry` • `sensor fusion prototypes` • `evaluation harnesses` • `reproducibility`
+`local inference` • `persistent memory` • `state machines` • `agent orchestration` • `REST APIs` • `CLI tools` • `PWA/browser apps` • `FFI/C ABI` • `CMake/Cargo` • `simulation` • `telemetry` • `sensor-fusion prototypes` • `evaluation harnesses` • `reproducibility`
 
 ---
 
-# 🌌 PUBLIC REPOSITORY UNIVERSE
+# 🌐 SELECTED PUBLIC REPOSITORY UNIVERSE
 
-### Foundations + AI systems
+### AI / state / foundations
 - [CosmicSynapse](https://github.com/NavisWORLD/CosmicSynapse)
 - [The Theory of CST](https://github.com/NavisWORLD/The-theory-of-CST)
 - [Cosmic Synapse A-LMI](https://github.com/NavisWORLD/cosmic-synapse-A-lmi)
-- [12D Hebbian Transformer](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-)
+- [The Cosmic Davis 12D Hebbian Transformer](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-)
 - [12D Hebbian Transformer v4.20](https://github.com/NavisWORLD/The-Cosmic-Davis-12D-Hebbian-Transformer-ver.4.20)
 - [Hermes Agent](https://github.com/NavisWORLD/hermes-agent)
 - [The Beast Box](https://github.com/NavisWORLD/The-beast-box-)
 - [Synapse OS](https://github.com/NavisWORLD/Synapse-os-)
 - [Cosmic Nova OS / GGUF surface](https://github.com/NavisWORLD/Cosmic-nova-os-GGUF-model-and-system-)
 
-### Reality Bridge + simulation + creative systems
+### Simulation / creative / interfaces
 - [Reality Bridge Universal Probe Engine](https://github.com/NavisWORLD/Reality-bridge-universal-probe-engine-sim-)
 - [Living Universe Sim Engine](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-)
 - [Infinite Adaptive Audio 12D Universe Engine](https://github.com/NavisWORLD/infinite-adaptive-audio-12d-universe-engine)
 - [Cosmic Quantum Video Picture Generator](https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-)
 
-### Documentation + reusable systems
+### Manuals / reusable infrastructure
 - [COSMOS CST Universe Manual](https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual.)
 - [Cosmic Reconciliation Manual](https://github.com/NavisWORLD/Cosmic-reconciliation-manual-)
 - [CNS Adaptive Connector](https://github.com/NavisWORLD/CNS-central-nervous-system-adaptive-connector-)
 - [Cory Davis Portfolio](https://github.com/NavisWORLD/Cory-Davis-portfolio-)
 
-### Applied safety / camera research concept
-- [Flock Camera Bio Update](https://github.com/NavisWORLD/Flock-camera-bio-update-) — public research concept; privacy, consent and lawful-use constraints should remain explicit.
+### Safety / community research concept
+- [Flock Camera Bio Update](https://github.com/NavisWORLD/Flock-camera-bio-update-) — research concept with privacy, consent and lawful-use constraints kept explicit.
 
-> Some active systems and research repositories are private. This profile describes the engineering lineage without pretending private code is publicly inspectable.
-
----
-
-# 📚 MANUALS, TEACHING + REPRODUCIBILITY
-
-The project ecosystem is not just source code. I have built a large documentation layer around it:
-
-- architecture manuals
-- rebuild guides
-- teacher/student material
-- technical monographs
-- benchmark and falsifiability notes
-- provenance and claim matrices
-- installation/recovery documentation
-- hardware/software integration guides
-- cross-language examples
-- experiment receipts and failure logs
-
-Start here:
-- [Volume I: The COSMOS CST Universe Manual](https://github.com/NavisWORLD/Volume-I-The-COSMOS-CST-Universe-Manual.)
-- [Cosmic Reconciliation Manual](https://github.com/NavisWORLD/Cosmic-reconciliation-manual-)
-- [Portfolio OS](https://github.com/NavisWORLD/Cory-Davis-portfolio-)
+### Active private / protected project surfaces
+The connected account also contains protected work including **Cosmos**, **Arxiv-12dyn**, **Python CST Libraries**, **COSMOS HEARTLIGHT**, **Synaptic Systems**, **Quantum/Azure/IBM bridge work**, **bio-integration tooling**, **research logs**, and additional Reality Bridge / memorial-continuity / model-system development repositories. These are intentionally not exposed here as public source links.
 
 ---
 
-# 🔬 PUBLIC PROOF SURFACES
+# 🧪 RESEARCH + PUBLICATION SURFACES
 
 | Surface | Purpose |
 |---|---|
-| **GitHub** | code, history, commits, tests, releases, documentation |
-| **Hugging Face** | QC67_cosmo / local-model distribution work |
+| **GitHub** | code, history, commits, tests, releases and documentation |
+| **Hugging Face** | QC67_cosmo / portable local-model distribution work |
 | **Zenodo** | deposited research record and DOI |
 | **Portfolio OS** | corrected chronology, attribution, proof ledger and technical navigation |
 
@@ -416,52 +431,53 @@ Start here:
 
 ---
 
-# 🧭 WHAT I AM BUILDING TOWARD
+# 🧭 MISSION
 
-A future where powerful AI can be:
+```text
+               USER OWNS THE MACHINE
+                        │
+                        ▼
+          LOCAL / INTERCHANGEABLE MODEL
+                        │
+             ┌──────────┼──────────┐
+             ▼          ▼          ▼
+           MEMORY      STATE      TOOLS
+             │          │          │
+             └──────────┼──────────┘
+                        ▼
+                   COSMOS LAYER
+                        │
+        ┌───────────────┼───────────────┐
+        ▼               ▼               ▼
+      ZEREF        REALITY BRIDGE    ROBOTICS
+        │               │               │
+        └───────────────┼───────────────┘
+                        ▼
+              EVIDENCE + PROVENANCE
+                        │
+                        ▼
+                 INSPECT / LEARN / GROW
+```
+
+I am building toward AI systems that are:
 
 - **local** enough to belong to the user
 - **persistent** enough to remember real context over time
-- **portable** enough to survive changing hardware and model backends
+- **portable** enough to survive hardware and model changes
 - **inspectable** enough to audit what happened
-- **recoverable** enough to fail without losing its history
-- **creative** enough to work across software, sound, simulation and robotics
-- **measurable** enough to separate a cool story from a real result
-
-```text
-               user owns the machine
-                       │
-                       ▼
-          local model / interchangeable backend
-                       │
-            ┌──────────┼──────────┐
-            ▼          ▼          ▼
-          memory      state      tools
-            │          │          │
-            └──────────┼──────────┘
-                       ▼
-                  COSMOS layer
-                       │
-        ┌──────────────┼──────────────┐
-        ▼              ▼              ▼
-      ZEREF        Reality Bridge   Robotics
-        │              │              │
-        └──────────────┼──────────────┘
-                       ▼
-             evidence + provenance
-                       │
-                       ▼
-               inspect / learn / grow
-```
+- **recoverable** enough to fail without erasing history
+- **creative** enough to work across software, music, simulation and robotics
+- **measurable** enough to separate a compelling story from a real result
 
 ---
 
 <div align="center">
 
 ## © 2026 Cory Davis // NavisWORLD
+### COSMOS • ZEREF • DAVIS CST • SYNAPSE OS • REALITY BRIDGE
 
-**COSMOS • ZEREF • Davis CST • Synaptic Z Systems**
+**Build strange. Measure hard. Leave a map.**
 
-*The universe is the software. I build the interfaces.*
+*The universe is the software. We just write better interfaces.*
 
 </div>
