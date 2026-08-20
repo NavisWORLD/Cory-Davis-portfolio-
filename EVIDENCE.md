@@ -42,6 +42,37 @@ See [`PROOF_LEDGER.md`](PROOF_LEDGER.md) and [`ARTIFACTS.sha256`](ARTIFACTS.sha2
 
 **Important boundary:** this is not a claim that twelve channels are universally optimal, that dyn12 beats every static architecture on absolute loss, or that more state dimensions always help. The documented ladder itself showed that more dimensions did **not** monotonically improve the result.
 
+### Controlled dyn12 / dyn42 / dyn54 reference ablation — 2026-08-20
+
+**MEASURED, reference-model stress test.** Seven conditions were trained under a frozen protocol across seeds `17, 23, 41, 73, 101`, with 500 AdamW updates per seed/condition and 2,048 held-out examples per run. The Transformer-family conditions were parameter-matched at 17,128 parameters and shared identical initialization hashes within each seed.
+
+On overall held-out accuracy:
+
+| Condition | Accuracy | Assoc. recall | XOR | Δ vs Transformer |
+|---|---:|---:|---:|---:|
+| Transformer | 46.68% | 31.61% | 5.92% | — |
+| EMA54 mixture | **66.81%** | **92.62%** | 6.22% | **+20.13 pp** |
+| static54 mixture | 46.95% | 32.38% | 5.95% | +0.27 pp |
+| dyn12 mixture | 57.89% | 65.42% | 6.25% | +11.21 pp |
+| dyn42 mixture | 58.01% | 66.16% | 5.86% | +11.33 pp |
+| dyn54 mixture | **61.15%** | **76.25%** | 5.36% | **+14.47 pp** |
+
+The strongest falsification result is that **generic learned EMA54 state outperformed dyn54 on all 5/5 seeds**. The paired dyn54-minus-EMA54 accuracy difference was `-5.65 pp`, bootstrap 95% CI `[-9.54, -2.02]`.
+
+The important nulls were preserved:
+
+- static54 vs Transformer: `+0.27 pp`, bootstrap 95% CI `[-0.39, +0.98]`;
+- XOR remained at or near the 6.25% chance level across Transformer, EMA54, static54, dyn12, dyn42, and dyn54;
+- 22 null-result records remain in the machine-readable null ledger.
+
+Same-checkpoint dyn54 interventions also showed that the trained model was using the state pathway: gate-zero, shuffled-state, and static-state substitutions all reduced accuracy materially relative to dyn54 ON.
+
+**Bounded conclusion:** dynamic state passed through the shared state-affinity mixture helped the associative-memory stress test, and dyn54 was strongest among dyn12/dyn42/dyn54. **Not supported:** a claim that the specific dyn equations are uniquely superior, because the simpler generic EMA54 dynamic-state control was stronger.
+
+**Evidence boundary:** this is the public/reference-model mechanism experiment. It is **not** relabeled as the missing canonical PHOS checkpoint ablation and does not establish broad language-model superiority.
+
+Portfolio evidence package: [`research/cst-controlled-ablation-2026-08-20/`](research/cst-controlled-ablation-2026-08-20/).
+
 ### Mechanism preflight
 
 A task metric is not trusted until the intended mechanism is shown to be alive. The public documentation preserves silent-failure cases including wrong-axis normalization, gate saturation/clamping, near-identity Gaussian kernels, corpus drift, telemetry schema loss, and invalid text/state causal pairing.
