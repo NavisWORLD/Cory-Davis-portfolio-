@@ -109,6 +109,34 @@ The canonical manual records a frozen-corpus seven-rung comparison in which dyn1
 
 **Not claimed:** that 12 dimensions are universally optimal or that dyn12 beats every static/larger model on absolute loss.
 
+### Controlled dyn12 / dyn42 / dyn54 + state-affinity mixture ablation — 2026-08-20
+
+**Protocol:** 5 seeds (`17, 23, 41, 73, 101`), 7 conditions, 500 updates per seed/condition, 2,048 held-out examples per run. The Transformer-family conditions use the same 17,128-parameter architecture and identical initialization hashes within each seed.
+
+**Headline measurements:**
+
+- Transformer: **46.68%** overall accuracy; **31.61%** associative recall.
+- dyn12 mixture: **57.89%** overall; **65.42%** associative recall.
+- dyn42 mixture: **58.01%** overall; **66.16%** associative recall.
+- dyn54 mixture: **61.15%** overall; **76.25%** associative recall.
+- generic EMA54 mixture: **66.81%** overall; **92.62%** associative recall.
+
+The generic EMA54 control beat dyn54 on **5/5 seeds**. The paired dyn54-minus-EMA54 overall-accuracy difference was **-5.65 percentage points**, bootstrap 95% CI **[-9.54, -2.02]**.
+
+**NULLS kept:**
+
+- static54 vs Transformer: **+0.27 pp**, bootstrap 95% CI **[-0.39, +0.98]**;
+- delayed 4-bit XOR stayed at or near its **6.25% chance level** across the Transformer/state conditions;
+- **22 machine-readable null records** are retained rather than removed.
+
+**Same-checkpoint causal controls:** turning the dyn54 state-mixture gate off, shuffling state, or substituting static state all reduced accuracy materially relative to dyn54 ON, indicating that the trained dyn54 checkpoint was using the aligned state pathway in this stress test.
+
+**Bounded conclusion:** dynamic state plus the shared Gaussian state-affinity mixture can materially help this synthetic associative-memory task. dyn54 was the best of dyn12/dyn42/dyn54, but the specific dyn equations were **not uniquely superior**, because the generic EMA54 dynamic-state control was stronger.
+
+**Evidence boundary:** reference-model mechanism evidence only; **not** the missing canonical PHOS checkpoint ablation and **not** a universal language-model superiority claim.
+
+Evidence package: [`research/cst-controlled-ablation-2026-08-20/`](research/cst-controlled-ablation-2026-08-20/)
+
 ### Quantum provenance
 
 Specific archived measurement paths can provide auditable measurement-derived provenance and deterministic downstream seed/weight derivation.
