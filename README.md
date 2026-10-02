@@ -68,6 +68,7 @@ I do not want this portfolio to be a museum of claims. I want it to be a **map o
 | **[Proof Ledger](PROOF_LEDGER.md)** | see what the evidence actually supports |
 | **[Provenance](PROVENANCE.md)** | inspect authorship and source history when it matters |
 | **[Repository Universe](REPOSITORY_UNIVERSE.md)** | navigate the wider NavisWORLD ecosystem |
+| **[Beast Box Reality: The World Is the Map](#02a--beast-box-reality--the-world-is-the-map)** | explore the persistent-creature reality game and its business plan |
 | **[Résumé](resume.html)** | read the recruiter-friendly version |
 
 The detailed evidence, history, and provenance material still exists. It just does not need to stand in the doorway yelling at you before you meet the work.
@@ -181,6 +182,37 @@ Local-first, human-centered support and educational technology with privacy boun
 **[github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-](https://github.com/NavisWORLD/Cosmic-quantum-video-picture-generator-)**
 
 Image, video, storybook, continuity, deterministic receipts, resumable creative workflows, and experimental generative media systems.
+
+---
+
+# `02A // BEAST BOX REALITY — THE WORLD IS THE MAP`
+
+### 👹🌎 One persistent creature. Multiple AI brains. An entire universe to explore.
+
+What if a kid could step outside and become the main character of their **own** creature-adventure story? What if an original digital companion remembered their adventures, developed through care and exploration, battled friends, traveled between devices, and could even become a playable character in a **native Game Boy Advance game**?
+
+That's the vision for **Beast Box Reality**: the proposed reality-game layer connecting my existing Beast Box/COSMOS architecture, creature tools, CST world-state experiments and Lost COSMOS / Eridoria game development. The goal is an interconnected ecosystem for families, players, artists, researchers and independent creators—not another stateless AI-pet chat window.
+
+**The player loop:** **EXPLORE → BOND → REMEMBER → EVOLVE → BATTLE / TRADE → EXPORT.**
+
+- **Your own beast:** A distinct original companion with a seeded genome, visual design, verifiable game stats, optional dialogue and a controlled history of adventures. Procedural variation and bounded quantum-*inspired* simulation could influence evolutionary choices; this does **not** claim quantum hardware on a phone, consciousness or AGI.
+- **The real world becomes a map:** With consent, safe and coarse environmental inputs could create discovery quests, habitats, AR encounters and optional family adventures. A fully playable indoor/location-free mode remains essential.
+- **The COSMOS watch concept:** Phone and existing smartwatch integration first; optional inexpensive BLE accessories later. Spatial displays or a true holographic wearable are *longer-term proposals*, not available hardware.
+- **Friends, battles and trading:** Start with deterministic, verifiable asynchronous battles by friend code and authorized game-character transfers. Minors never need open stranger-location matchmaking, public coordinates or speculative financial trading.
+- **One identity across worlds:** My architecture separates durable state/memory from replaceable inference models and explicitly separates **information from authority**. Supported browser and native GBA exports carry approved game data—not private chats, credentials or a running LLM.
+- **Creator economy:** Original creature families, arenas, stories, music and export skins could form a licensed, fiat-first marketplace. Optional adult-only cryptographic collectibles are a later evaluation, **not** a children's token economy.
+- **Beyond gaming:** The same permissioned game tools could support accessible adventures, environmental learning, educational simulations and creator-made worlds.
+
+#### What already has public engineering receipts?
+
+My [February 2025 memory source](https://github.com/NavisWORLD/CosmicSynapse/commit/f4e7da1f1bf3fba07a23a3de932e675bea5078bd), [May 2025 CST world/sensory source](https://github.com/NavisWORLD/The-theory-of-CST/commit/b96a56501cb447cb68e2683915d22024a0c526dd), and [October 2025 Python agent source](https://github.com/NavisWORLD/cosmic-synapse-A-lmi/commit/527cd7084d25c40275af77b5b7a5397a31ed6179) document earlier components. The later [controlled A→B→A software-state swap](https://github.com/NavisWORLD/The-beast-box-/blob/main/docs/PERSISTENT_SUBSTRATE_MODEL_SWAP_002_FINAL_REPORT.md), [native Lost COSMOS mGBA test](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-/actions/runs/36098821373), and [Beast Cage character-export CI](https://github.com/NavisWORLD/The-beast-box-/actions/runs/36947395413) document narrower working engineering results.
+
+**What is not yet a finished product:** The end-to-end public reality game, synchronized creature progression across all games, city-scale AR, real-time multiplayer, wearable holograms, an operational creator marketplace and fully reviewed child-account infrastructure. Those are deliberately staged implementation goals.
+
+**[📘 Read the Beast Box Reality Game business plan and roadmap](BEAST_BOX_REALITY_GAME_BUSINESS_PLAN.md)** · [Inspect the public timeline](TIMELINE.md) · [View the Beast Box code](https://github.com/NavisWORLD/The-beast-box-) · [Explore the Lost COSMOS game](https://github.com/NavisWORLD/Cosmic-synapse-the-living-universe-sim-engine-)
+
+> **BUILD THE COMPANION FIRST. THE WORLD SECOND.**  
+> State may travel. Information may travel. **Authority does not travel automatically.**
 
 ---
 
